@@ -12,3 +12,4 @@ class Profile(models.Model):
     bio = models.TextField(max_length=150, blank=True, null=True)
     profile_pic = CloudinaryField('profile_pic', default='placeholder')
     bg_pic = CloudinaryField('bg_pic', default='placeholder')
+    is_suspended = models.BooleanField(default=False, editable=True)
