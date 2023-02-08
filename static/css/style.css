@@ -16,6 +16,16 @@ body {
   background-color: var(--off-white);
 }
 
+/* Nav */
+.navbar {
+    background-color: var(--dark-grey);
+}
+
+.navbar a {
+    color: var(--off-white);
+}
+
+/* Footer */
 footer {
     background-color: var(--dark-grey);
     color: var(--off-white);
