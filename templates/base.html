@@ -27,8 +27,35 @@
 
 <body>
 
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <a class="navbar-brand" href="#">TRIBE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Search <i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Notifications <i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Messages <i class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   {% block content %}
-  {% endblock %}
+  <!-- Content Goes here -->
+  {% endblock content %}
 
 </body>
 <footer class="text-center p-3">
