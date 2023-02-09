@@ -7,11 +7,11 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
+  <div class="row mt-4">
+    <div class="col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 form-box shadow py-2 px-3 boxes">
+      <h3 class="text-center">{% trans "Join Your Tribe" %}</h3>
 
-      <p>{% blocktrans %}If you have not created an account yet, then please
+      <p class="text-center">{% blocktrans %}If you have not created an account yet, then please
         <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
       <form class="login" method="POST" action="{% url 'account_login' %}">
