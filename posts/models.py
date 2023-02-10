@@ -11,3 +11,6 @@ class Post(models.Model):
     posted_on = models.DateTimeField(auto_now_add=True)
     is_private = models.BooleanField(default=False, editable=True)
     is_flagged = models.BooleanField(default=False, editable=True)
+
+    class Meta:
+        ordering = ['-posted_on']
