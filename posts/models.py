@@ -14,3 +14,9 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-posted_on']
+
+    def __str__(self):
+        """
+        String representation
+        """
+        return self.content
