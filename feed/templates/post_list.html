@@ -4,10 +4,13 @@
 
 {% block content %}
 <div class="container">
+    {% for post in post_list %}
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom">
-            <h1>Test</h1>
+            <p><strong>@{{ post.author }}</strong> on {{ post.posted_on }}</p>
+            <p>{{ post.content }}</p>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
