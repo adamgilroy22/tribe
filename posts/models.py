@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 
 
@@ -8,7 +9,7 @@ class Post(models.Model):
     """
     author = models.OneToOneField(User, on_delete=models.CASCADE)
     content = models.TextField(max_length=200)
-    posted_on = models.DateTimeField(auto_now_add=True)
+    posted_on = models.DateTimeField(default=timezone.now)
     is_private = models.BooleanField(default=False, editable=True)
     is_flagged = models.BooleanField(default=False, editable=True)
 
