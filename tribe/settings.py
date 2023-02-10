@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
+    'crispy_forms',
     'home',
     'posts',
     'profiles',
@@ -58,6 +59,8 @@ INSTALLED_APPS = [
     'messaging',
     'notifications',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
