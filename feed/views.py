@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from posts.models import Post
+from posts.forms import PostForm
 
 
 class PostListView(View):
@@ -9,6 +10,7 @@ class PostListView(View):
 
         context = {
             'post_list': posts,
+            'form': PostForm(),
         }
 
         return render(request, 'post_list.html', context)

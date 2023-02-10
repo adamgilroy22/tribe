@@ -4,6 +4,20 @@
 
 {% block content %}
 <div class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom">
+            <h5>Add a post</h5>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+            </form>
+        </div>
+    </div>
     {% for post in post_list %}
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom">
