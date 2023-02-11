@@ -13,7 +13,7 @@ class PostListView(View):
             'form': PostForm(),
         }
 
-        return render(request, 'post_list.html', context)
+        return render(request, 'feed.html', context)
 
     def post(self, request, *args, **kwargs):
         posts = Post.objects.all().order_by('-posted_on')
@@ -29,4 +29,4 @@ class PostListView(View):
             new_post.author = request.user
             new_post.save()
 
-        return render(request, 'post_list.html', context)
+        return render(request, 'feed.html', context)
