@@ -5,6 +5,10 @@ from posts.forms import PostForm
 
 
 class PostListView(View):
+    """
+    Display posts on feed sorted by time posted
+    and create new posts using post form
+    """
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all().order_by('-posted_on')
 
@@ -30,3 +34,17 @@ class PostListView(View):
             new_post.save()
 
         return render(request, 'feed.html', context)
+
+
+class PostDetailView(View):
+    """
+    View individual posts in more detail
+    """
+    def get(self, request, pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
+
+        context = {
+            'post': post,
+        }
+
+        return render(request, 'post_detail.html', context)
