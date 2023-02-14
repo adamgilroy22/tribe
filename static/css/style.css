@@ -25,6 +25,15 @@ body {
     color: var(--off-white);
 }
 
+/* Posts */
+.delete-icon {
+    color: var(--accent-orange);
+}
+
+.delete-icon:hover {
+    color: var(--accent-orange);
+}
+
 /* Footer */
 footer {
     background-color: var(--dark-grey);
