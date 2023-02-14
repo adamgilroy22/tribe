@@ -9,7 +9,7 @@ from comments.models import Comment
 from comments.forms import CommentForm
 
 
-class PostListView(View):
+class PostListView(LoginRequiredMixin, View):
     """
     Display posts on feed sorted by time posted
     and create new posts using post form
@@ -41,7 +41,7 @@ class PostListView(View):
         return render(request, 'feed.html', context)
 
 
-class PostDetailView(View):
+class PostDetailView(LoginRequiredMixin, View):
     """
     View individual posts in more detail
     """
@@ -81,7 +81,7 @@ class PostDetailView(View):
         return render(request, 'post_detail.html', context)
 
 
-class PostDeleteView(DeleteView):
+class PostDeleteView(LoginRequiredMixin, DeleteView):
     """
     Delete posts
     """
@@ -90,7 +90,7 @@ class PostDeleteView(DeleteView):
     success_url = reverse_lazy('feed')
 
 
-class CommentDeleteView(DeleteView):
+class CommentDeleteView(LoginRequiredMixin, DeleteView):
     """
     Delete comments
     """
@@ -102,7 +102,7 @@ class CommentDeleteView(DeleteView):
         return reverse_lazy('post-detail', kwargs={'pk': pk})
 
 
-class CommentEditView(UpdateView):
+class CommentEditView(LoginRequiredMixin, UpdateView):
     """
     Edit comments
     """
