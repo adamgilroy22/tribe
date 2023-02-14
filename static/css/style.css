@@ -36,6 +36,15 @@ body {
     color: var(--accent-orange);
 }
 
+/* Comments */
+.edit-icon {
+    color: var(--main-teal);
+}
+
+.edit-icon:hover {
+    color: var(--main-teal);
+}
+
 /* Footer */
 footer {
     background-color: var(--dark-grey);
