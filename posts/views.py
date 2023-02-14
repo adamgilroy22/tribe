@@ -52,4 +52,3 @@ class PostDetailView(View):
         }
 
         return render(request, 'post_detail.html', context)
-
