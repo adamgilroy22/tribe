@@ -28,6 +28,8 @@ body {
 /* Posts */
 .delete-icon {
     color: var(--accent-orange);
+    z-index: 2;
+    position: relative;
 }
 
 .delete-icon:hover {
