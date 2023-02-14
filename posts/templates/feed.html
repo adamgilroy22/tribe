@@ -25,7 +25,12 @@
     {% for post in post_list %}
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom position-relative">
-            <p><strong>@{{ post.author }}</strong> on {{ post.posted_on }}</p>
+            <p>
+                <strong>@{{ post.author }}</strong> on {{ post.posted_on }}
+                {% if request.user == post.author %}
+                <a href="{% url 'post-delete' post.pk %}" style="color: #333;"><i class="fa-solid fa-trash"></i></a>
+                {% endif %}
+            </p>
             <p>{{ post.content }}</p>
             <a href="{% url 'post-detail' post.pk %}" class="stretched-link"></a>
         </div>
