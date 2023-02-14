@@ -48,9 +48,33 @@ class PostDetailView(View):
         post = Post.objects.get(pk=pk)
         form = CommentForm()
 
+        comments = Comment.objects.filter(post=post).order_by('-posted_on')
+
         context = {
             'post': post,
-            'form': form
+            'form': form,
+            'comments': comments,
+        }
+
+        return render(request, 'post_detail.html', context)
+
+    def post(self, request, pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
+        if request.method == "POST":
+            form = CommentForm(request.POST)
+
+            if form.is_valid():
+                new_comment = form.save(commit=False)
+                new_comment.author = request.user
+                new_comment.post = post
+                new_comment.save()
+
+        comments = Comment.objects.filter(post=post).order_by('-posted_on')
+
+        context = {
+            'post': post,
+            'form': form,
+            'comments': comments,
         }
 
         return render(request, 'post_detail.html', context)
