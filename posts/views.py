@@ -87,3 +87,15 @@ class PostDeleteView(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('feed')
+
+
+class CommentDeleteView(DeleteView):
+    """
+    Delete comments
+    """
+    model = Comment
+    template_name = 'comment_delete.html'
+
+    def get_success_url(self):
+        pk = self.kwargs['pk']
+        return reverse_lazy('post-detail', kwargs={'pk': pk})
