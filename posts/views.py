@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from django.views.generic.edit import DeleteView
+from django.views.generic.edit import DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import Post
 from .forms import PostForm
@@ -95,6 +95,19 @@ class CommentDeleteView(DeleteView):
     """
     model = Comment
     template_name = 'comment_delete.html'
+
+    def get_success_url(self):
+        pk = self.kwargs['post_pk']
+        return reverse_lazy('post-detail', kwargs={'pk': pk})
+
+
+class CommentEditView(UpdateView):
+    """
+    Edit comments
+    """
+    model = Comment
+    fields = ['comment']
+    template_name = 'comment_edit.html'
 
     def get_success_url(self):
         pk = self.kwargs['post_pk']

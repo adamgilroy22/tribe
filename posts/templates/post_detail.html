@@ -41,6 +41,7 @@
                 <strong>@{{ comment.author }}</strong> on {{ comment.posted_on }}
                 {% if request.user == comment.author %}
                 <a href="{% url 'comment-delete' post.pk comment.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
+                <a href="{% url 'comment-edit' post.pk comment.pk %}" class="edit-icon"><i class="fa-solid fa-edit"></i></a>
                 {% endif %}
             </p>
             <p>{{ comment.comment }}</p>
