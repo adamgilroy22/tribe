@@ -29,5 +29,13 @@
             </form>
         </div>
     </div>
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            {% for comment in comments %}
+            <p><strong>@{{ comment.author }}</strong> on {{ comment.posted_on }}</p>
+            <p>{{ comment.comment }}</p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
