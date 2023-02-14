@@ -81,7 +81,7 @@ class PostDetailView(LoginRequiredMixin, View):
         return render(request, 'post_detail.html', context)
 
 
-class PostDeleteView(LoginRequiredMixin, DeleteView):
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     Delete posts
     """
@@ -89,8 +89,12 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'post_delete.html'
     success_url = reverse_lazy('feed')
 
+    def test_func(self):
+        post = self.get_object()
+        return self.request.user == post.author
 
-class CommentDeleteView(LoginRequiredMixin, DeleteView):
+
+class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     Delete comments
     """
@@ -101,8 +105,12 @@ class CommentDeleteView(LoginRequiredMixin, DeleteView):
         pk = self.kwargs['post_pk']
         return reverse_lazy('post-detail', kwargs={'pk': pk})
 
+    def test_func(self):
+        comment = self.get_object()
+        return self.request.user == comment.author
 
-class CommentEditView(LoginRequiredMixin, UpdateView):
+
+class CommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     Edit comments
     """
@@ -113,3 +121,7 @@ class CommentEditView(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         pk = self.kwargs['post_pk']
         return reverse_lazy('post-detail', kwargs={'pk': pk})
+
+    def test_func(self):
+        comment = self.get_object()
+        return self.request.user == comment.author
