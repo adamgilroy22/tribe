@@ -15,8 +15,11 @@ class Profile(models.Model):
     display_name = models.CharField(max_length=30, blank=True, null=True)
     bio = models.TextField(max_length=150, blank=True, null=True)
     profile_pic = CloudinaryField('profile_pic',
-                                  default='static/img/default-profile-pic.png')
-    bg_pic = CloudinaryField('bg_pic', default='placeholder')
+                                  default='placeholder',
+                                  blank=True)
+    bg_pic = CloudinaryField('bg_pic',
+                             default='placeholder',
+                             blank=True)
     is_suspended = models.BooleanField(default=False, editable=True)
 
 
