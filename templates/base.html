@@ -39,6 +39,7 @@
 <body>
 
   <header>
+    {% if user.is_authenticated %}
     <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-lg">
       <a class="navbar-brand" href="{% url 'feed' %}">TRIBE</a>
@@ -70,6 +71,7 @@
         </ul>
       </div>
     </nav>
+    {% endif %}
   </header>
 
   {% block content %}
