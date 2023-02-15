@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'feed' %}" class="btn btn-light">Back To Feed</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="card shadow-sm col-md-8 col-sm-12 border-bottom px-5 pt-3">
+            <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle" width="200" height="200" />
+            {% if profile.display_name %}
+            <h3 class="py-4">@{{ profile.display_name }}</h3>
+            {% endif %}
+            {% if profile.bio %}
+            <h3 class="py-4">{{ profile.bio }}</h3>
+            {% endif %}
+        </div>
+    </div>
+    {% for post in posts %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-sm-12 border-bottom position-relative">
+            <p>
+                <strong>@{{ post.author }}</strong> on {{ post.posted_on }}
+                {% if request.user == post.author %}
+                    <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
+                {% endif %}
+            </p>
+            <p>{{ post.content }}</p>
+            <a href="{% url 'post-detail' post.pk %}" class="stretched-link"></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
