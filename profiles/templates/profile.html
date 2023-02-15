@@ -15,10 +15,11 @@
         <div class="card shadow-sm col-md-8 col-sm-12 border-bottom px-5 pt-3">
             <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle" width="200" height="200" />
             {% if profile.display_name %}
-            <h3 class="py-4">@{{ profile.display_name }}</h3>
+            <h3>{{ profile.display_name }}</h3>
             {% endif %}
+            <h5>@{{ profile.user }}</h4>
             {% if profile.bio %}
-            <h3 class="py-4">{{ profile.bio }}</h3>
+            <p class="py-4">{{ profile.bio }}</p>
             {% endif %}
         </div>
     </div>
