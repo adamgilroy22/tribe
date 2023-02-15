@@ -8,7 +8,7 @@ class ProfileView(View):
     def get(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         user = profile.user
-        posts = Post.object.filter(author=user).order_by('-posted_on')
+        posts = Post.objects.filter(author=user).order_by('-posted_on')
 
         context = {
             'user': user,
