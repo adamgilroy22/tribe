@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import DeleteView, UpdateView
 from django.urls import reverse_lazy
@@ -37,6 +37,7 @@ class PostListView(LoginRequiredMixin, View):
             new_post = form.save(commit=False)
             new_post.author = request.user
             new_post.save()
+            return redirect(request.META['HTTP_REFERER'])
 
         return render(request, 'feed.html', context)
 
