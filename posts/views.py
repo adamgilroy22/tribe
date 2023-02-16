@@ -70,6 +70,7 @@ class PostDetailView(LoginRequiredMixin, View):
                 new_comment.author = request.user
                 new_comment.post = post
                 new_comment.save()
+                return redirect(request.META['HTTP_REFERER'])
 
         comments = Comment.objects.filter(post=post).order_by('-posted_on')
 
