@@ -21,6 +21,8 @@ class Profile(models.Model):
                              default='placeholder',
                              blank=True)
     is_suspended = models.BooleanField(default=False, editable=True)
+    followers = models.ManyToManyField(User, blank=True,
+                                       related_name='followers')
 
 
 @receiver(post_save, sender=User)
