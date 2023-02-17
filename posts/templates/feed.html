@@ -44,11 +44,11 @@
                     <input type="hidden" name="next" value="{{ request.path }}">
                     <button class="like-button" type="submit">
                         {% if request.user in post.likes.all %}
-                        <i class="fa-solid fa-thumbs-up">
+                        <i class="fa-solid fa-thumbs-up"></i>
                         {% else %}
                         <i class="fa-regular fa-thumbs-up"></i>
                         {% endif %}
-                        <span>{{ post.likes.all.count }}</span></i>
+                        <span>{{ post.likes.all.count }}</span>
                     </button>
                 </form>
             </div>
