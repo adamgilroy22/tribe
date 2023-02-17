@@ -14,6 +14,14 @@ class ProfileView(View):
         posts = Post.objects.filter(author=user).order_by('-posted_on')
 
         followers = profile.followers.all()
+
+        for follower in followers:
+            if follower == request.user:
+                if_following = True
+                break
+            else:
+                is_following = False
+
         follower_count = len(followers)
 
         context = {
@@ -21,6 +29,7 @@ class ProfileView(View):
             'profile': profile,
             'posts': posts,
             'follower_count': follower_count,
+            'is_following': is_following,
         }
 
         return render(request, 'profile.html', context)
