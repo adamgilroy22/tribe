@@ -14,7 +14,7 @@
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom">
             <p>
-                <strong>@{{ post.author }}</strong> on {{ post.posted_on }}
+                <a class="text-primary" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
                 {% if request.user == post.author %}
                 <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
