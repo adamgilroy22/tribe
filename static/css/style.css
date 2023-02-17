@@ -43,11 +43,16 @@ body > footer {
 }
 
 /* Likes */
-.like-button {
+.like-button,
+.comment-button {
     color: var(--main-teal);
     background-color: transparent;
     border: none;
     box-shadow: none;
+}
+
+.comment-button > a {
+    color: var(--main-teal);
 }
 
 /* Comments */
