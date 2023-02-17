@@ -59,6 +59,15 @@
                 <p>{{ post.content }}</p>
                 <a href="{% url 'post-detail' post.pk %}" class="stretched-link"></a>
             </div>
+            <div class="d-flex flex-row">
+                <form method="POST" action="{% url 'post-like' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button class="like-button" type="submit">
+                        <i class="fa-regular fa-thumbs-up"> <span>{{ post.likes.all.count }}</span></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     {% endfor %}
