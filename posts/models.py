@@ -10,7 +10,6 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField(max_length=200)
     posted_on = models.DateTimeField(default=timezone.now)
-    is_private = models.BooleanField(default=False, editable=True)
     is_flagged = models.BooleanField(default=False, editable=True)
 
     class Meta:
