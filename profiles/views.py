@@ -42,3 +42,11 @@ class AddFollower(LoginRequiredMixin, View):
         profile.followers.add(request.user)
 
         return redirect('profile', pk=profile.pk)
+
+
+class RemoveFollower(LoginRequiredMixin, View):
+    def post(self, request, pk, *args, **kwargs):
+        profile = Profile.objects.get(pk=pk)
+        profile.followers.remove(request.user)
+
+        return redirect('profile', pk=profile.pk)
