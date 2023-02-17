@@ -13,10 +13,14 @@ class ProfileView(View):
         user = profile.user
         posts = Post.objects.filter(author=user).order_by('-posted_on')
 
+        followers = profile.followers.all()
+        follower_count = len(followers)
+
         context = {
             'user': user,
             'profile': profile,
             'posts': posts,
+            'follower_count': follower_count,
         }
 
         return render(request, 'profile.html', context)
