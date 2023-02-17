@@ -30,6 +30,19 @@
             {% endif %}
             <div class="mb-3">
                 <p>Followers: {{ follower_count }}</p>
+                {% if user != request.user %}
+                    {% if is_following %}
+                    <form method="POST" action="{% url 'remove-follower' profile.pk %}">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-danger" type="submit">Unfollow</button>
+                    </form>
+                    {% else %}
+                    <form method="POST" action="{% url 'add-follower' profile.pk %}">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-success" type="submit">Follow</button>
+                    </form>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
