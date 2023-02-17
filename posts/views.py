@@ -127,3 +127,23 @@ class CommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def test_func(self):
         comment = self.get_object()
         return self.request.user == comment.author
+
+
+class LikePost(LoginRequiredMixin, View):
+    """
+    Like and unlike posts
+    """
+    def post(self, request, pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
+
+        is_liked = False
+
+        for like in post.likes.all():
+            if like == request.user:
+                is_liked = True
+
+            if not is_liked:
+                post.likes.add(request.user)
+
+            if is_liked:
+                post.likes.remove(request.user)
