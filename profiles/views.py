@@ -15,6 +15,9 @@ class ProfileView(View):
 
         followers = profile.followers.all()
 
+        if len(followers) == 0:
+            is_following = False
+
         for follower in followers:
             if follower == request.user:
                 if_following = True
