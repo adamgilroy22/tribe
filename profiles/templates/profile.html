@@ -28,6 +28,9 @@
             {% if profile.bio %}
             <p class="py-4">{{ profile.bio }}</p>
             {% endif %}
+            <div class="mb-3">
+                <p>Followers: {{ follower_count }}</p>
+            </div>
         </div>
     </div>
     {% for post in posts %}
