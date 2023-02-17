@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import DeleteView, UpdateView
 from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from .models import Post
 from .forms import PostForm
@@ -142,8 +143,11 @@ class LikePost(LoginRequiredMixin, View):
             if like == request.user:
                 is_liked = True
 
-            if not is_liked:
-                post.likes.add(request.user)
+        if not is_liked:
+            post.likes.add(request.user)
 
-            if is_liked:
-                post.likes.remove(request.user)
+        if is_liked:
+            post.likes.remove(request.user)
+
+        next = request.POST.get('next', '/')
+        return HttpResponseRedirect(next)
