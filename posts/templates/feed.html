@@ -40,7 +40,12 @@
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ request.path }}">
                     <button class="like-button" type="submit">
-                        <i class="fa-regular fa-thumbs-up"> <span>{{ post.likes.all.count }}</span></i>
+                        {% if request.user in post.likes.all %}
+                        <i class="fa-solid fa-thumbs-up">
+                        {% else %}
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        {% endif %}
+                        <span>{{ post.likes.all.count }}</span></i>
                     </button>
                 </form>
             </div>
