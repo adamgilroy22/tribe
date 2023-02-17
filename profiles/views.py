@@ -20,7 +20,7 @@ class ProfileView(View):
 
         for follower in followers:
             if follower == request.user:
-                if_following = True
+                is_following = True
                 break
             else:
                 is_following = False
