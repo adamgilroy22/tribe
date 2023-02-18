@@ -31,6 +31,13 @@ body > footer {
     color: var(--off-white);
 }
 
+.search-button {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--off-white);
+}
+
 /* Posts */
 .delete-icon {
     color: var(--accent-orange);
