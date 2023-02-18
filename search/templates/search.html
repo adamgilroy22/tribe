@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 border-bottom mt-5">
+            <h5>User results for: {{ request.GET.query }}</h5>
+        </div>
+    </div>
+    {% for profile in profile_list %}
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8 col-sm-12 border-bottom position-relative">
+            <p><a href="{% url 'profile' profile.pk %}" class="text-primary">
+                @{{ profile.user }}
+            </a></p>
+            <p>Followers: {{ profile.followers.all.count }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 border-bottom mt-5">
+            <h5>Post results for: {{ request.GET.query }}</h5>
+        </div>
+    </div>
+    {% for post in post_list %}
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8 col-sm-12 border-bottom">
+            <p>
+                <a class="text-primary" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
+                {% if request.user == post.author %}
+                    <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
+                {% endif %}
+            </p>
+            <div class="position-relative">
+                <p>{{ post.content }}</p>
+                <a href="{% url 'post-detail' post.pk %}" class="stretched-link"></a>
+            </div>
+            <div class="d-flex flex-row">
+                <button class="comment-button">
+                    <a href="{% url 'post-detail' post.pk %}"><i class="fa-regular fa-comment"></i></a>
+                </button>
+                <form method="POST" action="{% url 'post-like' post.pk %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    <button class="like-button" type="submit">
+                        {% if request.user in post.likes.all %}
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        {% else %}
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        {% endif %}
+                        <span>{{ post.likes.all.count }}</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
