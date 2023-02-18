@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from django.db.models import Q
 from posts.models import Post
+from profiles.models import Profile
 
 
 class Search(View):
@@ -13,11 +14,11 @@ class Search(View):
         )
 
         post_list = Post.objects.filter(
-            Q(post__content__icontains=query)
+            Q(content__icontains=query)
         )
 
         context = {
-            'profile-list': profile_list,
+            'profile_list': profile_list,
             'post_list': post_list,
         }
 
