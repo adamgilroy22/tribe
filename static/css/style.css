@@ -17,6 +17,10 @@ body {
   background-color: var(--off-white);
 }
 
+body {
+    padding-top: 70px;
+}
+
 body > footer {
     position: sticky;
     top: 100vh;
