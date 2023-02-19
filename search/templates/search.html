@@ -10,6 +10,7 @@
             <a href="{% url 'feed' %}" class="btn btn-light">Back To Feed</a>
         </div>
     </div>
+    {% if profile_list %}
     <div class="row justify-content-center">
         <div class="col-md-8 col-sm-12 border-bottom mt-5">
             <h5>User results for: {{ request.GET.query }}</h5>
@@ -25,9 +26,17 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 border-bottom mt-5">
+            <h5>No user results for: {{ request.GET.query }}</h5>
+        </div>
+    </div>
+    {% endif %}
 </div>
 
 <div class="container">
+    {% if post_list %}
     <div class="row justify-content-center">
         <div class="col-md-8 col-sm-12 border-bottom mt-5">
             <h5>Post results for: {{ request.GET.query }}</h5>
@@ -66,5 +75,12 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12 border-bottom mt-5">
+            <h5>No post results for: {{ request.GET.query }}</h5>
+        </div>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
