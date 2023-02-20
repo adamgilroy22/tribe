@@ -16,10 +16,17 @@ class PostListView(LoginRequiredMixin, View):
     and create new posts using post form
     """
     def get(self, request, *args, **kwargs):
-        posts = Post.objects.all().order_by('-posted_on')
+        current_user = request.user
+
+        following_posts = Post.objects.filter(
+            author__profile__followers__in=[current_user.id]
+        ).order_by('-posted_on')
+
+        all_posts = Post.objects.all().order_by('-posted_on')
 
         context = {
-            'post_list': posts,
+            'all_post_list': all_posts,
+            'following_post_list': following_posts,
             'form': PostForm(),
         }
 
