@@ -36,7 +36,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="following-posts" role="tabpanel" aria-labelledby="following-posts-tab">
                 {% for post in following_post_list %}
-                <div class="border-bottom">
+                <div class="mt-3 mb-3 border-bottom">
                     <a href="{% url 'profile' post.author.profile.pk %}">
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="round-circle post-img" height="30" width="30" />
@@ -77,7 +77,7 @@
             </div>
             <div class="tab-pane fade" id="all-posts" role="tabpanel" aria-labelledby="all-posts-tab">
                 {% for post in all_post_list %}
-                <div class="border-bottom">
+                <div class="mt-3 mb-3 border-bottom">
                     <a href="{% url 'profile' post.author.profile.pk %}">
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="round-circle post-img" height="30" width="30" />
