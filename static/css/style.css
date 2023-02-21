@@ -45,12 +45,20 @@ body > footer {
 /* Posts */
 .delete-icon {
     color: var(--accent-orange);
-    z-index: 2;
     position: relative;
 }
 
 .delete-icon:hover {
     color: var(--accent-orange);
+}
+
+.profile-link {
+	text-decoration: none;
+}
+
+.post-img {
+    float: left;
+    margin-right: 1rem;
 }
 
 /* Likes */
