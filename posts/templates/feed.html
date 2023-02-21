@@ -36,7 +36,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="following-posts" role="tabpanel" aria-labelledby="following-posts-tab">
                 {% for post in following_post_list %}
-                <div class="mt-3 mb-3 border-bottom">
+                <div class="single-post mt-3 mb-3 border-bottom">
                     <a href="{% url 'profile' post.author.profile.pk %}">
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
@@ -74,10 +74,21 @@
                     </div>
                 </div>
                 {% endfor %}
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border mt-2 not-visible" role="status" id="spinner">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                    <div class="load-more-btn mt-3 mb-3 text-center">
+                        <button type="button" class="btn btn-success">See More</button>
+                    </div>
+                    <div class="alert alert-info mt-2 not-visible text-center" role="alert" id="alert">
+                        All caught up!
+                    </div>
             </div>
             <div class="tab-pane fade" id="all-posts" role="tabpanel" aria-labelledby="all-posts-tab">
                 {% for post in all_post_list %}
-                <div class="mt-3 mb-3 border-bottom">
+                <div class="single-post mt-3 mb-3 border-bottom">
                     <a href="{% url 'profile' post.author.profile.pk %}">
                         {% if "placeholder" in post.author.profile.profile_pic.url %}
                         <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
