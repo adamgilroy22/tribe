@@ -51,9 +51,9 @@
         <div class="col-md-8 col-sm-12 border-bottom">
             <a href="{% url 'profile' post.author.profile.pk %}">
                 {% if "placeholder" in post.author.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="round-circle post-img" height="30" width="30" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
                 {% else %}
-                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="round-circle post-img" height="30" width="30" />
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
                 {% endif %}
             </a>
             <p>
