@@ -49,8 +49,15 @@
     {% for post in posts %}
     <div class="row justify-content-center mt-5">
         <div class="col-md-8 col-sm-12 border-bottom">
+            <a href="{% url 'profile' post.author.profile.pk %}">
+                {% if "placeholder" in post.author.profile.profile_pic.url %}
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="round-circle post-img" height="30" width="30" />
+                {% else %}
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="round-circle post-img" height="30" width="30" />
+                {% endif %}
+            </a>
             <p>
-                <a class="text-primary" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
+                <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
                 {% if request.user == post.author %}
                     <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
