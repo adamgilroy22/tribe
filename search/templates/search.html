@@ -19,7 +19,14 @@
     {% for profile in profile_list %}
     <div class="row justify-content-center mt-3">
         <div class="col-md-8 col-sm-12 border-bottom position-relative">
-            <p><a href="{% url 'profile' profile.pk %}" class="text-primary">
+            <a href="{% url 'profile' profile.pk %}">
+                {% if "placeholder" in profile.profile_pic.url %}
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                {% else %}
+                <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                {% endif %}
+            </a>
+            <p><a href="{% url 'profile' profile.pk %}" class="text-primary profile-link">
                 @{{ profile.user }}
             </a></p>
             <p>Followers: {{ profile.followers.all.count }}</p>
