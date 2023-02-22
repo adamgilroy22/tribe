@@ -20,13 +20,9 @@ class PostListView(LoginRequiredMixin, View):
 
         following_posts = Post.objects.filter(
             author__profile__followers__in=[current_user.id]
-        ).order_by('-posted_on')[0:10]
-
-        total_following_posts = following_posts.count()
+        ).order_by('-posted_on')
 
         all_posts = Post.objects.all().order_by('-posted_on')
-
-        total_all_posts = all_posts.count()
 
         context = {
             'all_post_list': all_posts,
