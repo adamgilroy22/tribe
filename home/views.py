@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def index(request):
     """ A view to return the index page """
 
-    return render(request, 'home/index.html')
+    if request.user.is_authenticated:
+        return redirect('feed/')
+    else:
+        return render(request, 'home/index.html')
