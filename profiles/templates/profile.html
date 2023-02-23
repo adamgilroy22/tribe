@@ -33,7 +33,7 @@
             <div class="mb-3">
                 <p>
                     {% if follower_count > 0 %}
-                    <a class="profile-link" href="{% url 'followers-list' profile.pk %}">Followers: {{ follower_count }}</a>
+                    <a class="profile-link" href="{% url 'followers-list' profile.pk %}">Followers: {{ follower_count }} </a>
                     {% else %}
                     Followers: {{ follower_count }}
                     {% endif %}
