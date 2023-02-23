@@ -29,7 +29,13 @@
             <p class="py-4">{{ profile.bio }}</p>
             {% endif %}
             <div class="mb-3">
-                <p>Followers: {{ follower_count }}</p>
+                <p>
+                    {% if follower_count > 0 %}
+                    <a class="profile-link" href="{% url 'followers-list' profile.pk %}">Followers: {{ follower_count }}</a>
+                    {% else %}
+                    Followers: {{ follower_count }}
+                    {% endif %}
+                </p>
                 {% if user != request.user %}
                     {% if is_following %}
                     <form method="POST" action="{% url 'remove-follower' profile.pk %}">
