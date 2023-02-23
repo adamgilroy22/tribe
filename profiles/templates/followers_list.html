@@ -21,7 +21,7 @@
     <div class="row justify-content-center">
         <div class="col-md-5 col-sm-12 position-relative my-3 border-bottom">
             <a href="{% url 'profile' follower.profile.pk %}">
-                {% if "placeholder" in profile.profile_pic.url %}
+                {% if "placeholder" in follower.profile.profile_pic.url %}
                 <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle" width="60" height="60" />
                 {% else %}
                 <img src="{{ follower.profile.profile_pic.url }}" alt="profile image" class="rounded-circle" width="60" height="60" />
