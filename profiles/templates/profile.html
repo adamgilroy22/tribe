@@ -13,21 +13,23 @@
 
     <div class="row justify-content-center mt-5">
         <div class="card shadow-sm col-md-8 col-sm-12 border-bottom px-5 pt-3">
-            {% if "placeholder" in profile.profile_pic.url %}
-            <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle" width="150" height="150" />
-            {% else %}
-            <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle" width="150" height="150" />
-            {% endif %}
-            {% if profile.display_name %}
-            <h3>{{ profile.display_name }}</h3>
-            {% endif %}
-            <h5>@{{ profile.user }}</h5>
-            {% if request.user == user %}
-            <a href="{% url 'profile-edit' profile.pk %}">EDIT PROFILE</a>
-            {% endif %}
-            {% if profile.bio %}
-            <p class="py-4">{{ profile.bio }}</p>
-            {% endif %}
+            <div class="profile-head text-center">
+                {% if "placeholder" in profile.profile_pic.url %}
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle" width="150" height="150" />
+                {% else %}
+                <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle" width="150" height="150" />
+                {% endif %}
+                {% if profile.display_name %}
+                <h3>{{ profile.display_name }}</h3>
+                {% endif %}
+                <h5>@{{ profile.user }}</h5>
+                {% if request.user == user %}
+                <a href="{% url 'profile-edit' profile.pk %}">EDIT PROFILE</a>
+                {% endif %}
+                {% if profile.bio %}
+                <p class="py-4">{{ profile.bio }}</p>
+                {% endif %}
+            </div>
             <div class="mb-3">
                 <p>
                     {% if follower_count > 0 %}
@@ -37,17 +39,17 @@
                     {% endif %}
                 </p>
                 {% if user != request.user %}
-                    {% if is_following %}
-                    <form method="POST" action="{% url 'remove-follower' profile.pk %}">
-                        {% csrf_token %}
-                        <button class="btn btn-outline-danger" type="submit">Unfollow</button>
-                    </form>
-                    {% else %}
-                    <form method="POST" action="{% url 'add-follower' profile.pk %}">
-                        {% csrf_token %}
-                        <button class="btn btn-outline-success" type="submit">Follow</button>
-                    </form>
-                    {% endif %}
+                {% if is_following %}
+                <form method="POST" action="{% url 'remove-follower' profile.pk %}">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-danger" type="submit">Unfollow</button>
+                </form>
+                {% else %}
+                <form method="POST" action="{% url 'add-follower' profile.pk %}">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-success" type="submit">Follow</button>
+                </form>
+                {% endif %}
                 {% endif %}
             </div>
         </div>
@@ -65,7 +67,7 @@
             <p>
                 <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
                 {% if request.user == post.author %}
-                    <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
+                <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
             </p>
             <div class="position-relative">
