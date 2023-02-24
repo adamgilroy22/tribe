@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from .views import PostListView, PostDetailView, PostDeleteView, CommentDeleteView, CommentEditView, LikePost
+from .views import FollowingPostListView, AllPostListView, PostDetailView, PostDeleteView, CommentDeleteView, CommentEditView, LikePost
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='feed'),
+    path('', FollowingPostListView.as_view(), name='feed'),
+    path('all-posts', AllPostListView.as_view(), name='all-posts'),
     path('post/<int:pk>', PostDetailView.as_view(), name='post-detail'),
     path('post/delete/<int:pk>', PostDeleteView.as_view(), name='post-delete'),
     path('post/<int:post_pk>/comment/delete/<int:pk>', CommentDeleteView.as_view(), name='comment-delete'),
