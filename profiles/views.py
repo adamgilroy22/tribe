@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.core.paginator import Paginator
 from django.urls import reverse_lazy
 from .models import Profile
 from posts.models import Post
@@ -12,7 +13,11 @@ class ProfileView(View):
     def get(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         user = profile.user
-        posts = Post.objects.filter(author=user).order_by('-posted_on')
+        user_posts = Post.objects.filter(author=user).order_by('-posted_on')
+
+        paginator = Paginator(user_posts, 10)
+        page_num = request.GET.get('page')
+        posts = paginator.get_page(page_num)
 
         followers = profile.followers.all()
 
