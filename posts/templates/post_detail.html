@@ -76,5 +76,19 @@
         </div>
     </div>
     {% endfor %}
+
+    {% if comments.has_other_pages %}
+    <nav aria-label="Post navigation">
+        <ul class="pagination justify-content-center">
+            {% if comments.has_previous %}
+            <li class="page-item"><a href="?page={{ comments.previous_page_number }}" class="btn btn-outline-primary">Go Back</a></li>
+            {% endif %}
+
+            {% if comments.has_next %}
+            <li class="page-item"><a href="?page={{ comments.next_page_number }}" class="btn btn-outline-primary">See More</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
 {% endblock %}

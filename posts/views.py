@@ -99,7 +99,11 @@ class PostDetailView(LoginRequiredMixin, View):
         post = Post.objects.get(pk=pk)
         form = CommentForm()
 
-        comments = Comment.objects.filter(post=post).order_by('-posted_on')
+        all_comments = Comment.objects.filter(post=post).order_by('-posted_on')
+
+        paginator = Paginator(all_comments, 5)
+        page_num = request.GET.get('page')
+        comments = paginator.get_page(page_num)
 
         context = {
             'post': post,
