@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.edit import DeleteView, UpdateView
+from django.core.paginator import Paginator
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
@@ -19,9 +20,13 @@ class FollowingPostListView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         current_user = request.user
 
-        posts = Post.objects.filter(
+        following_posts = Post.objects.filter(
             author__profile__followers__in=[current_user.id]
         ).order_by('-posted_on')
+
+        paginator = Paginator(following_posts, 10)
+        page_num = request.GET.get('page')
+        posts = paginator.get_page(page_num)
 
         context = {
             'following_post_list': posts,
@@ -55,7 +60,11 @@ class AllPostListView(LoginRequiredMixin, View):
     """
     def get(self, request, *args, **kwargs):
 
-        posts = Post.objects.all().order_by('-posted_on')
+        all_posts = Post.objects.all().order_by('-posted_on')
+
+        paginator = Paginator(all_posts, 10)
+        page_num = request.GET.get('page')
+        posts = paginator.get_page(page_num)
 
         context = {
             'all_post_list': posts,
