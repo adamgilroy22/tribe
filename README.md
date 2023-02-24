@@ -1,33 +1,9 @@
 # __Tribe - Postfolio Project 4__
-A social media app built with Django
+A social media app built with Django where users can sign up, create posts, view other people's posts, follow other users, like and comment on posts and delete their posts.
 
 Developed by Adam Gilroy
 
 [Live link to website](https://tribe.herokuapp.com/)
-
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
-
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://tribe.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
 
 ## UX
 
@@ -71,13 +47,9 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
 Example:
 
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
+- [Roboto](https://fonts.google.com/specimen/Roboto) was used for the primary headers and titles.
 
 - [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
 
@@ -85,23 +57,37 @@ Example:
 
 ## User Stories
 
-In this section, list all of your user stories for the project.
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up.
+- As a new site user, I would like to sign up for the site and create an account, so that I can create my profile.
 - As a new site user, I would like to ____________, so that I can ____________.
 
-### Returning Site Users
+### Registered Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to log in to my account, so that I can access the site.
+- As a registered user, I would like to log out of my account, so that I can end my session on my current device.
+- As a registered user, I would like to reset my password if I forget it, so that I can regain access to my account.
+- As a registered user, I would like to update my profile picture and cover photo, so that I can help other users identify me.
+- As a registered user, I would like to edit my profile bio, so that I can further personalize my profile.
+- As a registered user, I would like to follow other users, so that I can view their posts on my feed.
+- As a registered user, I would like to unfollow other users, so that I can remove their posts from my feed.
+- As a registered user, I would like to create new posts, so that I can share my thoughts with my followers.
+- As a registered user, I would like to delete my posts, so that I can remove content that I no longer want published.
+- As a registered user, I would like to view posts from people I follow, so that I can keep up to date with them.
+- As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post.
+- As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion.
+- As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published.
+- As a registered user, I would like to click on a post to expand it and see likes/comments, so that I can further engage with posts.
+- As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is.
+- As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow.
+- As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button.
+- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to ____________, so that I can ____________.
 
 ### Site Admin
 
