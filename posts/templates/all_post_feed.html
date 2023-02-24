@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom">
+            <h5>Add a post</h5>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success mt-3">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{% url 'feed' %}">Following</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'all-posts' %}">All Posts</a>
+                </li>
+            </ul>
+                {% for post in all_post_list %}
+                <div class="single-post mt-3 mb-3 border-bottom">
+                    <a href="{% url 'profile' post.author.profile.pk %}">
+                        {% if "placeholder" in post.author.profile.profile_pic.url %}
+                        <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                        {% else %}
+                        <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                        {% endif %}
+                    </a>
+                    <p>
+                        <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a>
+                        on {{ post.posted_on }}
+                        {% if request.user == post.author %}
+                        <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i
+                                class="fa-solid fa-trash"></i></a>
+                        {% endif %}
+                    </p>
+                    <div class="position-relative">
+                        <p>{{ post.content }}</p>
+                        <a href="{% url 'post-detail' post.pk %}" class="stretched-link"></a>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <button class="comment-button">
+                            <a href="{% url 'post-detail' post.pk %}"><i class="fa-regular fa-comment"></i></a>
+                        </button>
+                        <form method="POST" action="{% url 'post-like' post.pk %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ request.path }}">
+                            <button class="like-button" type="submit">
+                                {% if request.user in post.likes.all %}
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                {% else %}
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                {% endif %}
+                                <span>{{ post.likes.all.count }}</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            
+    </div>
+    </div>
+</div>
+{% endblock %}
