@@ -5,6 +5,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Profile
 from posts.models import Post
+from posts.forms import PostForm
 
 
 class ProfileView(View):
@@ -33,9 +34,25 @@ class ProfileView(View):
             'posts': posts,
             'follower_count': follower_count,
             'is_following': is_following,
+            'form': PostForm(),
         }
 
         return render(request, 'profile.html', context)
+
+    def post(self, request, *args, **kwargs):
+        form = PostForm(request.POST)
+
+        context = {
+            'form': form,
+        }
+
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.author = request.user
+            new_post.save()
+            return redirect(request.META['HTTP_REFERER'])
+
+        return render(request.META['HTTP_REFERER'], context)
 
 
 class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

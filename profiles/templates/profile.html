@@ -54,6 +54,25 @@
             </div>
         </div>
     </div>
+    {% if request.user == user %}
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-12 border-bottom">
+            <h5>Add a post</h5>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success mt-3">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endif %}
     {% for post in posts %}
     <div class="row justify-content-center mt-3 mb-3">
         <div class="col-md-8 col-sm-12 border-bottom">
