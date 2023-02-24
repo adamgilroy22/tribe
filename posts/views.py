@@ -47,7 +47,7 @@ class PostListView(LoginRequiredMixin, View):
             new_post.save()
             return redirect(request.META['HTTP_REFERER'])
 
-        return render(request, 'feed.html', context)
+        return render(request.META['HTTP_REFERER'], context)
 
 
 class PostDetailView(LoginRequiredMixin, View):
