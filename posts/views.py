@@ -10,27 +10,59 @@ from comments.models import Comment
 from comments.forms import CommentForm
 
 
-class PostListView(LoginRequiredMixin, View):
+class FollowingPostListView(LoginRequiredMixin, View):
     """
-    Display posts on feed sorted by time posted
+    Display posts on feed from people user is
+    following and sort by time posted
     and create new posts using post form
     """
     def get(self, request, *args, **kwargs):
         current_user = request.user
 
-        following_posts = Post.objects.filter(
+        posts = Post.objects.filter(
             author__profile__followers__in=[current_user.id]
         ).order_by('-posted_on')
 
-        all_posts = Post.objects.all().order_by('-posted_on')
-
         context = {
-            'all_post_list': all_posts,
-            'following_post_list': following_posts,
+            'following_post_list': posts,
             'form': PostForm(),
         }
 
         return render(request, 'feed.html', context)
+
+    def post(self, request, *args, **kwargs):
+        posts = Post.objects.all().order_by('-posted_on')
+        form = PostForm(request.POST)
+
+        context = {
+            'post_list': posts,
+            'form': form,
+        }
+
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.author = request.user
+            new_post.save()
+            return redirect(request.META['HTTP_REFERER'])
+
+        return render(request.META['HTTP_REFERER'], context)
+
+
+class AllPostListView(LoginRequiredMixin, View):
+    """
+    Display all site posts on feed sorted by time posted
+    and create new posts using post form
+    """
+    def get(self, request, *args, **kwargs):
+
+        posts = Post.objects.all().order_by('-posted_on')
+
+        context = {
+            'all_post_list': posts,
+            'form': PostForm(),
+        }
+
+        return render(request, 'all_post_feed.html', context)
 
     def post(self, request, *args, **kwargs):
         posts = Post.objects.all().order_by('-posted_on')
