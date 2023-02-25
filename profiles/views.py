@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from .models import Profile
 from posts.models import Post
 from posts.forms import PostForm
+from notifications.models import Notification
 
 
 class ProfileView(View):
@@ -78,6 +79,8 @@ class AddFollower(LoginRequiredMixin, View):
     def post(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         profile.followers.add(request.user)
+
+        notification = Notification.objects.create(notification_type=3, from_user=request.user, to_user=profile.user)
 
         return redirect('profile', pk=profile.pk)
 
