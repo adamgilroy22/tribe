@@ -9,6 +9,7 @@ from .models import Post
 from .forms import PostForm
 from comments.models import Comment
 from comments.forms import CommentForm
+from notifications.models import Notification
 
 
 class FollowingPostListView(LoginRequiredMixin, View):
@@ -123,6 +124,7 @@ class PostDetailView(LoginRequiredMixin, View):
                 new_comment.author = request.user
                 new_comment.post = post
                 new_comment.save()
+                notification = Notification.objects.create(notification_type=2, from_user=request.user, to_user=post.author, post=post)
                 return redirect(request.META['HTTP_REFERER'])
 
         comments = Comment.objects.filter(post=post).order_by('-posted_on')
