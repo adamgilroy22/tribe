@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .models import Notification
 from posts.models import Post
+from profiles.models import Profile
 
 
 class PostNotification(View):
