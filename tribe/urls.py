@@ -23,4 +23,5 @@ urlpatterns = [
     path('feed/', include('posts.urls')),
     path('', include('profiles.urls')),
     path('search/', include('search.urls')),
+    path('', include('notifications.urls')),
 ]
