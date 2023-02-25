@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-
 {% block content %}
-<div class="container h-100 p-5">
+<div class="container h-100">
     <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
+        <div class="col-8 col-md-6 col-sm-12 my-auto mx-auto text-center">
             <h1>Welcome to Tribe</h1>
             <h4>Find your Tribe, connect for life.</h4>
-            <div class="my-5">
+            <div class="my-auto">
                 <h4>
                     <a href="{% url 'account_signup' %}" class="sign-up-button btn btn-lg rounded-0 text-uppercase py-3">Sign Up</a>
                     <a href="{% url 'account_login' %}" class="log-in-button btn btn-lg rounded-0 text-uppercase py-3">Log In</a>
