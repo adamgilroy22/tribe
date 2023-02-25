@@ -18,7 +18,7 @@ class PostNotification(View):
 class FollowNotification(View):
     def get(self, request, notification_pk, profile_pk, *args, **kwargs):
         notification = Notification.objects.get(pk=notification_pk)
-        profile = UserProfile.objects.get(pk=profile_pk)
+        profile = Profile.objects.get(pk=profile_pk)
 
         notification.user_has_seen = True
         notification.save()
