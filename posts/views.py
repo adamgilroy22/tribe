@@ -199,6 +199,7 @@ class LikePost(LoginRequiredMixin, View):
 
         if not is_liked:
             post.likes.add(request.user)
+            notification = Notification.objects.create(notification_type=1, from_user=request.user, to_user=post.author, post=post)
 
         if is_liked:
             post.likes.remove(request.user)
