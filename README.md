@@ -29,8 +29,6 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ![screenshot](documentation/coolors.png)
 
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
 I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
@@ -49,9 +47,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 Example:
 
-- [Roboto](https://fonts.google.com/specimen/Roboto) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Roboto](https://fonts.google.com/specimen/Roboto) was used for the site text
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
