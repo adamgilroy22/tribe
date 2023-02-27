@@ -34,7 +34,7 @@
                     <h5>
                         @{{ profile.user }}
                         {% if user == request.user %}
-                        <a href="{% url 'profile-edit' profile.pk %}"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="{% url 'profile-edit' profile.pk %}"><i class="fa-solid fa-pen-to-square edit-icon"></i></a>
                         {% endif %}
                     </h5>
                     <p>{{ profile.bio }}</p>
