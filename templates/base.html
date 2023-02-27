@@ -58,10 +58,6 @@
             <a class="nav-link" href="{% url 'feed' %}">Home <i class="fa-solid fa-house"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Notifications <i class="fa-solid fa-bell"></i></a>
-            {% show_notifications %}
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">Messages <i class="fa-solid fa-envelope"></i></a>
           </li>
           <li class="nav-item">
@@ -70,6 +66,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_logout' %}">Logout <i
                 class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+          <li class="nav-item">
+            {% show_notifications %}
           </li>
         </ul>
         <ul class="navbar-nav ms-auto justify-content-end">

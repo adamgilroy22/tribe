@@ -85,18 +85,7 @@ body > footer {
 
 /* Notifications */
 .notification-badge {
-    transition: 0.3s;
-}
-
-.notification-badge:hover {
-    cursor: pointer;
-    opacity: 0.75;
-    transition: 0.3s;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+    font-size: xx-small;
 }
 
 .dropdown-content {
