@@ -4,6 +4,7 @@ from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.urls import reverse_lazy
+from django.contrib import messages
 from .models import Profile
 from posts.models import Post
 from posts.forms import PostForm
@@ -85,6 +86,9 @@ class AddFollower(LoginRequiredMixin, View):
 
         notification = Notification.objects.create(notification_type=3, from_user=request.user, to_user=profile.user)
 
+        messages.add_message(request, messages.SUCCESS,
+                             'User followed')
+
         return redirect('profile', pk=profile.pk)
 
 
@@ -92,6 +96,9 @@ class RemoveFollower(LoginRequiredMixin, View):
     def post(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         profile.followers.remove(request.user)
+
+        messages.add_message(request, messages.SUCCESS,
+                             'User unfollowed')
 
         return redirect('profile', pk=profile.pk)
 
