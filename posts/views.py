@@ -137,8 +137,15 @@ class PostDetailView(LoginRequiredMixin, View):
                 new_comment.author = request.user
                 new_comment.post = post
                 new_comment.save()
-                notification = Notification.objects.create(notification_type=2, from_user=request.user, to_user=post.author, post=post)
+                messages.add_message(request, messages.SUCCESS,
+                                     'Your comment has been submitted')
+                notification = Notification.objects.create(
+                    notification_type=2, from_user=request.user, to_user=post.author, post=post)
                 return redirect(request.META['HTTP_REFERER'])
+            else:
+                messages.add_message(
+                    request, messages.ERROR,
+                    'Oops something has went wrong, please try again!')
 
         comments = Comment.objects.filter(post=post).order_by('-posted_on')
 
