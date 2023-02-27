@@ -20,6 +20,8 @@ class ProfileView(View):
         page_num = request.GET.get('page')
         posts = paginator.get_page(page_num)
 
+        post_count = user_posts.count()
+
         followers = profile.followers.all()
 
         if len(followers) == 0:
@@ -38,6 +40,7 @@ class ProfileView(View):
             'user': user,
             'profile': profile,
             'posts': posts,
+            'post_count': post_count,
             'follower_count': follower_count,
             'is_following': is_following,
             'form': PostForm(),
