@@ -4,6 +4,7 @@ from django.views.generic.edit import DeleteView, UpdateView
 from django.core.paginator import Paginator
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from .models import Post
 from .forms import PostForm
@@ -49,7 +50,13 @@ class FollowingPostListView(LoginRequiredMixin, View):
             new_post = form.save(commit=False)
             new_post.author = request.user
             new_post.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your post has been sent')
             return redirect(request.META['HTTP_REFERER'])
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                'Oops something has went wrong, please try again!')
 
         return render(request.META['HTTP_REFERER'], context)
 
@@ -87,7 +94,13 @@ class AllPostListView(LoginRequiredMixin, View):
             new_post = form.save(commit=False)
             new_post.author = request.user
             new_post.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your post has been sent')
             return redirect(request.META['HTTP_REFERER'])
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                'Oops something has went wrong, please try again!')
 
         return render(request.META['HTTP_REFERER'], context)
 
