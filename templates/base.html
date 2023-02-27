@@ -84,6 +84,20 @@
     {% endif %}
   </header>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 text-center">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+          </button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
   {% block content %}
   <!-- Content Goes here -->
   {% endblock content %}
