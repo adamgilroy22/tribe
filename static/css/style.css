@@ -67,6 +67,14 @@ body > footer {
     margin-right: 1rem;
 }
 
+.feed-switch {
+    color: var(--main-purple) !important;
+}
+
+.feed-switch-active {
+    background-color: var(--main-purple) !important;
+}
+
 /* Likes */
 .like-button,
 .comment-button {

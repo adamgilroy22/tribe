@@ -27,10 +27,10 @@
         <div class="col-md-5 col-sm-12">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'feed' %}">Following</a>
+                    <a class="nav-link feed-switch-active" aria-current="page" href="{% url 'feed' %}">Following</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'all-posts' %}">All Posts</a>
+                    <a class="nav-link feed-switch" href="{% url 'all-posts' %}">All Posts</a>
                 </li>
             </ul>
             {% for post in following_post_list %}
