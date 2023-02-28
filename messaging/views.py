@@ -55,5 +55,5 @@ class CreateThread(View):
                 thread.save()
 
                 return redirect('thread', pk=thread.pk)
-        except receiver.DoesNotExist:
+        except Exception:
             return redirect('create-thread')
