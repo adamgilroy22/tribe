@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('profiles.urls')),
     path('search/', include('search.urls')),
     path('', include('notifications.urls')),
+    path('messages/', include('messaging.urls')),
 ]
