@@ -14,10 +14,10 @@ class Profile(models.Model):
                                 on_delete=models.CASCADE)
     display_name = models.CharField(max_length=30, blank=True, null=True)
     bio = models.TextField(max_length=150, blank=True, null=True)
-    profile_pic = CloudinaryField('profile_pic',
+    profile_pic = CloudinaryField('Profile Picture',
                                   default='placeholder',
                                   blank=True)
-    bg_pic = CloudinaryField('bg_pic',
+    bg_pic = CloudinaryField('Background Picture',
                              default='placeholder',
                              blank=True)
     is_suspended = models.BooleanField(default=False, editable=True)
