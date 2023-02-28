@@ -21,14 +21,14 @@
         <div class="col-md-8 col-sm-12 border-bottom position-relative">
             <a href="{% url 'profile' profile.pk %}">
                 {% if "placeholder" in profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% else %}
-                <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% endif %}
             </a>
             <p><a href="{% url 'profile' profile.pk %}" class="text-primary profile-link">
-                @{{ profile.user }}
-            </a></p>
+                    @{{ profile.user }}
+                </a></p>
             <p>Followers: {{ profile.followers.all.count }}</p>
         </div>
     </div>
@@ -54,15 +54,15 @@
         <div class="col-md-8 col-sm-12 border-bottom">
             <a href="{% url 'profile' post.author.profile.pk %}">
                 {% if "placeholder" in post.author.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% else %}
-                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% endif %}
             </a>
             <p>
                 <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
                 {% if request.user == post.author %}
-                    <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
+                <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
             </p>
             <div class="position-relative">

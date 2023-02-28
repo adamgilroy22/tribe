@@ -16,16 +16,16 @@
             <!-- Column -->
             <div class="card">
                 {% if "placeholder" in profile.bg_pic.url %}
-                        <img class="card-img-top" src="{% static 'img/default-bg-pic.png' %}" alt="background image"/>
-                        {% else %}
-                        <img class="card-img-top" src="{{ profile.bg_pic.url }}" alt="background image"/>
-                        {% endif %}
+                <img class="card-img-top" src="{% static 'img/default-bg-pic.png' %}" alt="background image" />
+                {% else %}
+                <img class="card-img-top" src="{{ profile.bg_pic.url }}" alt="background image" />
+                {% endif %}
                 <div class="card-body little-profile text-center">
                     <div class="pro-img">
                         {% if "placeholder" in profile.profile_pic.url %}
-                        <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image"/>
+                        <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" />
                         {% else %}
-                        <img src="{{ profile.profile_pic.url }}" alt="profile image"/>
+                        <img src="{{ profile.profile_pic.url }}" alt="profile image" />
                         {% endif %}
                     </div>
                     {% if profile.display_name %}
@@ -94,9 +94,9 @@
         <div class="col-md-5 col-sm-12 border-bottom">
             <a href="{% url 'profile' post.author.profile.pk %}">
                 {% if "placeholder" in post.author.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% else %}
-                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% endif %}
             </a>
             <p>
