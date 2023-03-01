@@ -39,6 +39,16 @@ body > footer {
     color: var(--off-white);
 }
 
+.purple-btn {
+    background-color: var(--main-purple);
+    color: var(--off-white);
+}
+
+.purple-btn:hover {
+    background-color: var(--main-purple);
+    color: var(--off-white);
+}
+
 /* Nav */
 .navbar {
     background-color: var(--main-purple);
