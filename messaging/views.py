@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.db.models import Q
 from django.contrib.auth.models import User
+from django.contrib import messages
 from .models import MessageThread, MessageModel
 from .forms import ThreadForm, MessageForm
 
@@ -56,6 +57,8 @@ class CreateThread(View):
 
                 return redirect('thread', pk=thread.pk)
         except Exception:
+            messages.add_message(request, messages.ERROR,
+                                 'That user does not exist')
             return redirect('create-thread')
 
 
