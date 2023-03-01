@@ -168,7 +168,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         post = self.get_object()
-        return self.request.user == post.author
+        return self.request.user == post.author or self.request.user.is_superuser
 
 
 class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -184,7 +184,7 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         comment = self.get_object()
-        return self.request.user == comment.author
+        return self.request.user == comment.author or self.request.user.is_superuser
 
 
 class CommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
