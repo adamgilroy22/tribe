@@ -3,7 +3,7 @@ from django.views import View
 from django.db.models import Q
 from django.contrib.auth.models import User
 from .models import MessageThread, MessageModel
-from .forms import ThreadForm
+from .forms import ThreadForm, MessageForm
 
 
 class MessageThreads(View):
@@ -43,7 +43,7 @@ class CreateThread(View):
             if MessageThread.objects.filter(user=request.user, receiver=receiver).exists():
                 thread = MessageThread.objects.filter(user=request.user, receiver=receiver)[0]
                 return redirect('thread', pk=thread.pk)
-            elif MessageThread.objects.filter(user=receiver, receiver=user).exists():
+            elif MessageThread.objects.filter(user=receiver, receiver=request.user).exists():
                 thread = MessageThread.objects.filter(user=receiver, receiver=request.user)[0]
                 return redirect('thread', pk=thread.pk)
 
@@ -75,3 +75,24 @@ class ThreadView(View):
 
         return render(request, 'thread.html', context)
 
+
+class CreateMessage(View):
+    """
+    Create and send a message
+    """
+    def post(self, request, pk, *args, **kwargs):
+        thread = MessageThread.objects.get(pk=pk)
+        if thread.receiver == request.user:
+            receiver = thread.user
+        else:
+            receiver = thread.receiver
+
+        message = MessageModel(
+            thread=thread,
+            message_sender=request.user,
+            message_receiver=receiver,
+            message_content=request.POST.get('message')
+        )
+
+        message.save()
+        return redirect('thread', pk=pk)
