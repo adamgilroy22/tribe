@@ -226,3 +226,20 @@ class LikePost(LoginRequiredMixin, View):
 
         next = request.POST.get('next', '/')
         return HttpResponseRedirect(next)
+
+
+class ReportPost(LoginRequiredMixin, View):
+    """
+    Report posts
+    """
+    def post(self, request, pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
+
+        if not post.is_flagged:
+            post.is_flagged = True
+            post.save()
+
+        messages.add_message(request, messages.SUCCESS,
+                             'Post reported')
+        next = request.POST.get('next', '/')
+        return HttpResponseRedirect(next)
