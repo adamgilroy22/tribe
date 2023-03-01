@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import MessageThread, MessageModel
+from notifications.models import Notification
 from .forms import ThreadForm, MessageForm
 
 
@@ -95,6 +96,13 @@ class CreateMessage(View):
             message_sender=request.user,
             message_receiver=receiver,
             message_content=request.POST.get('message')
+        )
+
+        notification = Notification.objects.create(
+            notification_type=4,
+            from_user=request.user,
+            to_user=receiver,
+            thread=thread
         )
 
         message.save()
