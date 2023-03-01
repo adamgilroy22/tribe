@@ -30,6 +30,16 @@ body > footer {
     font-family: 'Fredoka One', cursive;
 }
 
+.back-btn {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+}
+
+.back-btn:hover {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+}
+
 /* Nav */
 .navbar {
     background-color: var(--main-purple);

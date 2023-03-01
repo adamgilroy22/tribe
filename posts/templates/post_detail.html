@@ -5,9 +5,9 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-5 col-sm-6">
-            <a href="{% url 'feed' %}" class="btn btn-light">Back To Feed</a>
+            <a href="{% url 'feed' %}" class="btn back-btn">Back To Feed</a>
         </div>
     </div>
 
@@ -15,9 +15,9 @@
         <div class="col-md-5 col-sm-12 border-bottom">
             <a href="{% url 'profile' post.author.profile.pk %}">
                 {% if "placeholder" in post.author.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% else %}
-                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="30" width="30" />
+                <img src="{{ post.author.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
                 {% endif %}
             </a>
             <p>
