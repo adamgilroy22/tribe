@@ -5,7 +5,11 @@
 {% block content %}
 <div class="container">
     <div class="row justify-content-center mt-5">
+        {% if flagged_post_list %}
         <div class="col-md-5 col-sm-12">
+                <div class="border-bottom mt-5">
+                    <h5>Flagged Posts</h5>
+                </div>
             {% for post in flagged_post_list %}
             <div class="mt-3 mb-3 border-bottom" id="single-post">
                 <a href="{% url 'profile' post.author.profile.pk %}">
@@ -68,6 +72,13 @@
             {% endif %}
 
         </div>
+        {% else %}
+        <div class="col-md-5 col-sm-12">
+            <div class="border-bottom mt-5">
+                <h5>No Flagged Posts - Horaaay!</h5>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
