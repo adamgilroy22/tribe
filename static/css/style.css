@@ -178,6 +178,30 @@ body > footer {
     cursor: pointer;
 }
 
+/* Messages */
+.empty-text {
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sent-message {
+    background-color: var(--main-purple);
+    color: var(--off-white);
+    border-radius: 30px;
+    padding: 10px 25px;
+    width: 25%;
+}
+
+.received-message {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+    border-radius: 30px;
+    padding: 10px 25px;
+    width: 25%;
+    float: right;
+}
+
 /* Footer */
 footer {
     background-color: var(--dark-grey);
