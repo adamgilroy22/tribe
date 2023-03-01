@@ -57,3 +57,21 @@ class CreateThread(View):
                 return redirect('thread', pk=thread.pk)
         except Exception:
             return redirect('create-thread')
+
+
+class ThreadView(View):
+    """
+    View individual message thread with another user
+    """
+    def get(self, request, pk, *args, **kwargs):
+        form = MessageForm()
+        thread = MessageThread.objects.get(pk=pk)
+        message_list = MessageModel.objects.filter(thread__pk__contains=pk)
+        context = {
+            'thread': thread,
+            'form': form,
+            'message_list': message_list
+        }
+
+        return render(request, 'thread.html', context)
+
