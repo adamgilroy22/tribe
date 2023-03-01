@@ -188,18 +188,24 @@ body > footer {
 .sent-message {
     background-color: var(--main-purple);
     color: var(--off-white);
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 10px 25px;
-    width: 25%;
+    float: left;
+    max-width: 40%;
 }
 
 .received-message {
     background-color: var(--dark-grey);
     color: var(--off-white);
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 10px 25px;
-    width: 25%;
+    max-width: 40%;
     float: right;
+    text-align: end;
+}
+
+.message-text {
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -226,3 +232,19 @@ footer a:hover {
     color: var(--accent-orange);
     text-decoration: underline;
 }
+
+/* Media Queries */
+/* Messages */
+@media only screen and (max-width: 768px) {
+    .sent-message,
+    .received-message {
+        max-width: 50%;
+    }
+  }
+
+@media only screen and (max-width: 425px) {
+    .sent-message,
+    .received-message {
+        max-width: 85%;
+    }
+  }
