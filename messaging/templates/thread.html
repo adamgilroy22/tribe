@@ -28,11 +28,11 @@
 		<div class="col-md-12 my-1">
 			{% if message.message_sender == request.user %}
 				<div class="sent-message my-3">
-					<p>{{ message.message_content }}</p>
+					<p class="text-break">{{ message.message_content }}</p>
 				</div>
 			{% elif message.message_receiver == request.user %}
 				<div class="received-message my-3">
-					<p>{{ message.message_content }}</p>
+					<p class="text-break">{{ message.message_content }}</p>
 				</div>
 			{% endif %}
 		</div>
