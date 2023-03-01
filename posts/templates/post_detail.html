@@ -26,7 +26,7 @@
                 <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
             </p>
-            <p>{{ post.content }}</p>
+            <p class="text-break">{{ post.content }}</p>
             <div class="d-flex flex-row">
                 <form method="POST" action="{% url 'post-like' post.pk %}">
                     {% csrf_token %}
