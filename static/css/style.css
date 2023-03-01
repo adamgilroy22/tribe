@@ -64,12 +64,12 @@ body > footer {
 
 /* Posts */
 .delete-icon {
-    color: var(--accent-orange);
+    color: #dc3545;
     position: relative;
 }
 
 .delete-icon:hover {
-    color: var(--accent-orange);
+    color: #dc3545;
 }
 
 .profile-link {
