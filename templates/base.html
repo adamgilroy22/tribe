@@ -69,6 +69,11 @@
           <li class="nav-item">
             {% show_notifications %}
           </li>
+          {% if user.is_superuser %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'flagged-posts' %}">Admin Panel <i class="fa-solid fa-user"></i></a>
+          </li>
+          {% endif %}
         </ul>
         <ul class="navbar-nav ms-auto justify-content-end">
           <form class="d-flex" role="search" method="GET" action="{% url 'search' %}">
