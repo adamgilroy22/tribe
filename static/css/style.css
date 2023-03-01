@@ -26,6 +26,10 @@ body > footer {
     top: 100vh;
 }
 
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+}
+
 /* Nav */
 .navbar {
     background-color: var(--main-purple);
