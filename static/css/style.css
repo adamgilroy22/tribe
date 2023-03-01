@@ -60,6 +60,7 @@ body > footer {
 
 .profile-link {
 	text-decoration: none;
+    color: var(--main-purple) !important;
 }
 
 .post-img {
