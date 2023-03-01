@@ -243,3 +243,26 @@ class ReportPost(LoginRequiredMixin, View):
                              'Post reported')
         next = request.POST.get('next', '/')
         return HttpResponseRedirect(next)
+
+
+class FlaggedPostListView(LoginRequiredMixin, UserPassesTestMixin, View):
+    """
+    Display all flagged/reported posts on feed
+    only accessable by an admin
+    """
+    def get(self, request, *args, **kwargs):
+
+        flagged_posts = Post.objects.filter(is_flagged=True).order_by('-posted_on')
+
+        paginator = Paginator(flagged_posts, 10)
+        page_num = request.GET.get('page')
+        posts = paginator.get_page(page_num)
+
+        context = {
+            'flagged_post_list': posts,
+        }
+
+        return render(request, 'admin_post_view.html', context)
+
+    def test_func(self):
+        return self.request.user.is_superuser
