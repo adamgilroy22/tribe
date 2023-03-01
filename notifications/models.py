@@ -31,5 +31,11 @@ class Notification(models.Model):
         related_name='+',
         blank=True,
         null=True)
+    thread = models.ForeignKey(
+        'messaging.MessageThread',
+        on_delete=models.CASCADE,
+        related_name='+',
+        blank=True,
+        null=True)
     date = models.DateTimeField(default=timezone.now)
     user_has_seen = models.BooleanField(default=False)
