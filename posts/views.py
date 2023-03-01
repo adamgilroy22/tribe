@@ -238,9 +238,17 @@ class ReportPost(LoginRequiredMixin, View):
         if not post.is_flagged:
             post.is_flagged = True
             post.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Post reported')
+        elif post.is_flagged and self.request.user.is_superuser:
+            post.is_flagged = False
+            post.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Post unflagged')
+        else:
+            messages.add_message(request, messages.SUCCESS,
+                                 'Post reported')
 
-        messages.add_message(request, messages.SUCCESS,
-                             'Post reported')
         next = request.POST.get('next', '/')
         return HttpResponseRedirect(next)
 
