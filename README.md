@@ -137,13 +137,115 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 - **Sign Up Page**
 
-    - This is where the user can create an account for themselves 
+    - This is where the user can create an account for themselves by entering their e-mail address, desired username and password twice to confirm. If the user accidentally comes to this page instead of the login page they can get to the right page using the link in the card text.
 
 ![screenshot](documentation/feature02.png)
 
-- **Feature #3**
+- **Login Page**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - This is where users with existing accounts can log in with either their username or e-mail and password. They can choose to let their browser remember them if they plan on returning to the site on the same device to avoid having to log in again. There's a link to the sign up page too if the user accidentally navigated to this page instead of trying to create an account. If the user forgets their password they can click the link to reset it.
+
+![screenshot](documentation/feature03.png)
+
+- **Reset Password**
+
+    - If a user forgets their password, they can reset it by entering the e-mail address they used to sign up. They will then receive an email with a link to set a new password.
+
+![screenshot](documentation/feature03.png)
+
+- **Nav Menu**
+
+    - The nav menu contains everything the user will need to navigate the site. The site logo always appears on the site menu with the other items only showing for logged in users. The menu contains an admin panel that only shows up if the logged in user is an admin. From the nav menu, user's can go to their feed, their message inbox, their profile, view their notifications if they have any, search the site for posts and users using the search bar and log out.
+
+![screenshot](documentation/feature03.png)
+
+- **Footer**
+
+    - The footer appears across the website and includes information about me as the developer with links to my Twitter, Linkedin and GitHub pages. This lets the user get to know me as the developer and connect on these platforms if they wish.
+
+![screenshot](documentation/feature03.png)
+
+- **Following Feed**
+
+    - This is the user's main feed containing posts only from users they have followed. At the top of the feed there's an area for the user to create a post. There's buttons to switch between the user's following feed and the all posts feed containing every post from every site user. Posts are displayed in chronological order from newest to oldest. If the user isn't following anyone or the people they're following has no posts, a message will appear saying "It's very quiet here..." which will prompt the user to follow more users to start seeing posts in this feed.
+
+![screenshot](documentation/feature03.png)
+
+- **Add Post Form**
+
+    - This is where the user will create their posts. It appears in both the following and all posts feed along with the user's own profile. There's a prompt in the form for the user to "Share with your tribe...".
+
+![screenshot](documentation/feature03.png)
+
+- **Feed Switcher**
+
+    - This appears on both the following feed and the all posts feed. It allows the user to switch between both feeds with ease. The feed that the user is currently viewing will have a purple background to let the user know what feed they're on.
+
+![screenshot](documentation/feature03.png)
+
+- **All Posts Feed**
+
+    - This feed shows every single post on the website from all users. It allows the user to find new users to follow and connect with.
+
+![screenshot](documentation/feature03.png)
+
+- **Pagination**
+
+    - Both following and all posts feeds as well as profiles have pagination implemented so if more than 10 posts appear in the feed then buttons appear at the bottom to split the feed into individual pages with a maximum of 10 posts on a page. This is to increase the user experience and make the site content easier to digest. If the user is on the first page of pagination then only one button will appear saying "Older Posts" and if they're on the last page then a single button will appear and say "Newer Posts" if there's more than 2 pages of posts then anything in between with contain both buttons to change between pages.
+
+![screenshot](documentation/feature03.png)
+
+- **Posts**
+
+    - The site wouldn't be much without user posts. Posts are found in the users feeds. From here, users can like posts, report/flag posts, see when the post was created or delete a post if they're the original author. The number of times a post has been liked is displayed next to the like button and when a user has liked a post it's filled with colour to let the user know they've already liked it. It returns to an outline if the user unlikes it.
+
+![screenshot](documentation/feature03.png)
+
+- **Individual Posts Page**
+
+    - When a user clicks on a post in their feed, they're brought to the individual post page. Here they have the same options as in the feed in being able to like and flag/report a post. Under the post a user can see a list of comments on the post and a form to add their own comment to the post.
+
+![screenshot](documentation/feature03.png)
+
+- **Comments**
+
+    - Post comments are viewed under a post and similar to posts, can be liked. Comments can be deleted by the comment author or post author and edited by the comment author.
+
+![screenshot](documentation/feature03.png)
+
+- **Edit Comment**
+
+    - Comments can be edited by the user that created it. Clicking the edit icon brings them to a page where they can see their comment and make changes before hitting a button to save it. There's also a button to bring them back to the post where the comment was made if they hit the edit button by mistake.
+
+![screenshot](documentation/feature03.png)
+
+- **Profile**
+
+    - The profile contains a card with the user's information including profile picture, background iamge, display name, username, bio, number of posts and number of followers. If the user is viewing their own profile then they'll have an icon to edit their profile. If they're viewing another user's profile then they'll have a button to follow or unfollow that user. The profile also includes a list of posts and a form to create a new post if the user is on their own profile.
+
+![screenshot](documentation/feature03.png)
+
+- **Edit Profile**
+
+    - This is where the user can edit their profile details including their display name, bio, profile and background pictures. The user can also remove their profile picture or background image and revert back to the default from here. There's a button to bring them back to their profile if they decide not to make any edits.
+
+![screenshot](documentation/feature03.png)
+
+- **Follower List**
+
+    - If the user has followers, you can click on the follower count on their profile to see a list of their followers. You can click on the profiles in the list to view them and follow them if you want.
+
+![screenshot](documentation/feature03.png)
+
+- **Message Inbox**
+
+    - Users can access their message inbox from the nav menu. Here a list of users they have messaged/received messages from appears. There's a button to start a new conversation if they have no threads or want to start a new one. 
+
+![screenshot](documentation/feature03.png)
+
+- **Create Message Thread**
+
+    - If the user clicks on the "New Conversation" button in their inbox, they will be brought to a page to create a message thread with a user. When they type a username into the form and click Continue, a new thread is created if the users haven't messaged before and they're brought to their thread if one exists already. If the user enters a username that doesn't exist then an error message pops up letting them know that the user doesn't exist.
 
 ![screenshot](documentation/feature03.png)
 
