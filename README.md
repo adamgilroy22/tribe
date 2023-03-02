@@ -35,7 +35,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-Example:
+- [Fredoka One](https://fonts.google.com/specimen/Fredoka+One) was used for the site logo and header elements in the landing page, login, sign up, logout, password reset pages
 
 - [Roboto](https://fonts.google.com/specimen/Roboto) was used for the site text
 
@@ -46,8 +46,7 @@ Example:
 ### New Site Users
 
 - As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up.
-- As a new site user, I would like to sign up for the site and create an account, so that I can create my profile.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to sign up for the site and create an account, so that I can create my profile and start using the site.
 
 ### Registered Users
 
@@ -68,20 +67,17 @@ Example:
 - As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is.
 - As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow.
 - As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button.
-- As a registered user, I would like to ____________, so that I can ____________.
-- As a registered user, I would like to ____________, so that I can ____________.
-- As a registered user, I would like to ____________, so that I can ____________.
-- As a registered user, I would like to ____________, so that I can ____________.
-- As a registered user, I would like to ____________, so that I can ____________.
-- As a registered user, I would like to ____________, so that I can ____________.
+- As a registered user, I would like to message other users, so that I can communicate with them privately.
+- As a registered user, I would like to delete other people's comments on my posts, so that I can remove comments I don't want on my posts.
+- As a registered user, I would like to report or flag posts, so that I can notify the admins of content that might not be allowed on the site.
+- As a registered user, I would like to be notified when someone follows me, interacts with my posts, or messages me, so that I can interact back with them and keep up to date with my content.
+- As a registered user, I would like to like other people's comments on posts, so that I can let them know I enjoyed their comment.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to delete posts and comments from any user, so that I can moderate the site's content.
+- As a site administrator, I should be able to access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted.
+- As a site administrator, I should be able to unflag a post if deemed not needed for deletion, so that I can remove it from the list of flagged posts.
 
 ## Wireframes
 
