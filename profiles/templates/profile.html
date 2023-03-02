@@ -37,7 +37,9 @@
                         <a href="{% url 'profile-edit' profile.pk %}"><i class="fa-solid fa-pen-to-square edit-icon"></i></a>
                         {% endif %}
                     </h5>
+                    {% if profile.bio %}
                     <p>{{ profile.bio }}</p>
+                    {% endif %}
                     {% if user != request.user %}
                     {% if is_following %}
                     <form method="POST" action="{% url 'remove-follower' profile.pk %}">
