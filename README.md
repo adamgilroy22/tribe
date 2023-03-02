@@ -249,51 +249,21 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](documentation/feature03.png)
 
-- **Feature #3**
+- **Message Thread**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-- **Feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - This is where users can message back and forward between each other. User messages appear on the left in purple and the person they're talking to's messages appear on the right in black. Each message contains the date and time is was sent.
 
 ![screenshot](documentation/feature03.png)
 
-- **Feature #3**
+- **Search**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-- **Feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Users can search people and posts on the site. If their search matches then a list of both users and posts containing their search will appear. If the search has no results in either then both lists will let the user know there was no match. If there's a user but no post matching the query then the user list will contain matching queries and the post one will let them know there's no posts for their search and the same for the opposite. The page also contains a button to bring the user back to the feed.
 
 ![screenshot](documentation/feature03.png)
 
-- **Feature #3**
+- **Logout**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-- **Feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-- **Feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature03.png)
-
-- **Feature #3**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - When the user wants to finish their session and logout, they can do so from the nav menu. When a user clicks the logout button they're met with a page asking them to confirm they want to log out. They're redirected to the landing page if they click the confirmation button and a message pops up confirming that they've logged out.
 
 ![screenshot](documentation/feature03.png)
 
