@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="card col-md-8 mt-5 p-3 shadow-sm">
+		<div class="card col-md-8 mt-5 p-3 shadow-sm message-head">
 			{% if thread.receiver == request.user %}
             <a class="profile-link" href="{% url 'profile' thread.user.profile.pk %}">
                 {% if "placeholder" in thread.user.profile.profile_pic.url %}
@@ -28,6 +28,8 @@
 			{% endif %}
 		</div>
 	</div>
+
+	<div class="message-container">
 
 	{% if message_list.all.count == 0 %}
 	<div class="row justify-content-center my-5">
@@ -54,6 +56,7 @@
 		</div>
 	</div>
 	{% endfor %}
+</div>
 
 	<div class="row justify-content-center my-3">
 		<div class="card col-md-8 p-3 shadow-sm">
