@@ -1,26 +1,39 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
+{% load static %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% block extra_css %}
+<style>
+  body {
+    background-color: var(--main-purple);
+    padding-top: 0%;
+  }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="container h-100 p-5">
+<div class="container h-100">
   <div class="row h-100">
-    <div class="col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 shadow py-2 px-3 my-auto">
-      <h3 class="text-center">{% trans "Find Your Tribe" %}</h3>
-
-      <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
-      </p>
-
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-      </form>
+    <div class="col col-lg-6 col-md-8 col-sm-12 m-auto text-center p-3">
+      <div class="card border-0">
+        <img src="{% static 'img/signup-image.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h1 class="card-title logo-text">{% trans "Find Your Tribe" %}</h1>
+          <h5 class="card-text">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</h5>
+          <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <p><a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a></p>
+            <button class="sign-up-button btn btn-lg text-uppercase py-2" type="submit">{% trans "Sign Up" %}</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

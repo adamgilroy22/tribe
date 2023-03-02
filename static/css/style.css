@@ -26,6 +26,16 @@ body > footer {
     top: 100vh;
 }
 
+a {
+    color: var(--main-purple);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-purple);
+    text-decoration: none;
+}
+
 .logo-text {
     font-family: 'Fredoka One', cursive;
 }
