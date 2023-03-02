@@ -53,6 +53,7 @@ a:hover {
 .purple-btn {
     background-color: var(--main-purple);
     color: var(--off-white);
+    margin: 2px;
 }
 
 .purple-btn:hover {

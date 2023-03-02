@@ -84,11 +84,11 @@
             <nav aria-label="Post navigation">
                 <ul class="pagination justify-content-center">
                     {% if following_post_list.has_previous %}
-                    <li class="page-item"><a href="?page={{ following_post_list.previous_page_number }}" class="btn btn-outline-primary">Newer Posts</a></li>
+                    <li class="page-item"><a href="?page={{ following_post_list.previous_page_number }}" class="btn purple-btn">Newer Posts</a></li>
                     {% endif %}
 
                     {% if following_post_list.has_next %}
-                    <li class="page-item"><a href="?page={{ following_post_list.next_page_number }}" class="btn btn-outline-primary">Older Posts</a></li>
+                    <li class="page-item"><a href="?page={{ following_post_list.next_page_number }}" class="btn purple-btn">Older Posts</a></li>
                     {% endif %}
                 </ul>
             </nav>
