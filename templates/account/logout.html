@@ -1,25 +1,38 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
+{% load static %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
+{% block extra_css %}
+<style>
+    body {
+     background-color: var(--main-purple);
+     padding-top: 0%;
+    }
+ </style>
+{% endblock %}
+
 {% block content %}
-<div class="container h-100 p-5">
+<div class="container h-100">
   <div class="row h-100">
-    <div class="col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3 shadow py-2 px-3 my-auto justify-content-center">
-      <h1 class="logo-text text-center">{% trans "Sign Out?" %}</h1>
-
-      <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
-
-      <form class="text-center" method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-danger" type="submit">{% trans 'Sign Out' %}</button>
-      </form>
-    </div>
+      <div class="col col-lg-6 col-md-8 col-sm-12 m-auto text-center p-3">
+          <div class="card border-0">
+              <img src="{% static 'img/logout-image.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title logo-text">{% trans "Time to take a break?" %}</h1>
+                <h5 class="card-text">{% trans 'No problem, see you soon!' %}</h5>
+                <form class="text-center" method="post" action="{% url 'account_logout' %}">
+                  {% csrf_token %}
+                  {% if redirect_field_value %}
+                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  {% endif %}
+                  <button class="btn btn-danger btn-lg text-uppercase my-2" type="submit">{% trans 'Sign Out' %}</button>
+                </form>
+              </div>
+            </div>
+          </div>
   </div>
 </div>
 
