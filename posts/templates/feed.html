@@ -33,6 +33,7 @@
                     <a class="nav-link feed-switch" href="{% url 'all-posts' %}">All Posts</a>
                 </li>
             </ul>
+            {% if following_post_list %}
             {% for post in following_post_list %}
             <div class="mt-3 mb-3 border-bottom" id="single-post">
                 <a href="{% url 'profile' post.author.profile.pk %}">
@@ -92,6 +93,10 @@
                     {% endif %}
                 </ul>
             </nav>
+            {% endif %}
+            {% else %}
+            <h5 class="text-center p-3">It's very quiet here...</h5>
+
             {% endif %}
 
         </div>
