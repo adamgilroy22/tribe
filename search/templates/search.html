@@ -5,9 +5,9 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-3 col-sm-6">
-            <a href="{% url 'feed' %}" class="btn btn-light">Back To Feed</a>
+            <a href="{% url 'feed' %}" class="btn btn-dark">Back To Feed</a>
         </div>
     </div>
     {% if profile_list %}
@@ -21,15 +21,15 @@
         <div class="col-md-8 col-sm-12 border-bottom position-relative">
             <a href="{% url 'profile' profile.pk %}">
                 {% if "placeholder" in profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="50" width="50" />
                 {% else %}
-                <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{{ profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="50" width="50" />
                 {% endif %}
             </a>
-            <p><a href="{% url 'profile' profile.pk %}" class="text-primary profile-link">
+            <h5><a href="{% url 'profile' profile.pk %}" class="text-primary profile-link">
                     @{{ profile.user }}
-                </a></p>
-            <p>Followers: {{ profile.followers.all.count }}</p>
+                </a></h5>
+            <h6>Followers: {{ profile.followers.all.count }}</h6>
         </div>
     </div>
     {% endfor %}
