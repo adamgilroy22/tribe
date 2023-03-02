@@ -263,6 +263,20 @@ a:hover {
     text-align: end;
 }
 
+.message-sent-time {
+    float: left;
+    font-size: x-small;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+.message-received-time {
+    float: right;
+    font-size: x-small;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
 .message-text {
     margin-bottom: 0;
 }

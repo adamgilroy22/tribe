@@ -43,10 +43,12 @@
 			{% if message.message_sender == request.user %}
 				<div class="sent-message my-2">
 					<p class="message-text text-break">{{ message.message_content }}</p>
+					<p class="message-sent-time">{{ message.sent_at }}</p>
 				</div>
 			{% elif message.message_receiver == request.user %}
 				<div class="received-message my-2">
 					<p class="message-text text-break">{{ message.message_content }}</p>
+					<p class="message-received-time">{{ message.sent_at }}</p>
 				</div>
 			{% endif %}
 		</div>
