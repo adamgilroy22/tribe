@@ -228,6 +228,29 @@ class LikePost(LoginRequiredMixin, View):
         return HttpResponseRedirect(next)
 
 
+class LikeComment(LoginRequiredMixin, View):
+    """
+    Like and unlike comments
+    """
+    def post(self, request, pk, *args, **kwargs):
+        comment = Comment.objects.get(pk=pk)
+
+        is_liked = False
+
+        for like in comment.likes.all():
+            if like == request.user:
+                is_liked = True
+
+        if not is_liked:
+            comment.likes.add(request.user)
+
+        if is_liked:
+            comment.likes.remove(request.user)
+
+        next = request.POST.get('next', '/')
+        return HttpResponseRedirect(next)
+
+
 class ReportPost(LoginRequiredMixin, View):
     """
     Report posts
