@@ -63,6 +63,16 @@ body > footer {
     border-radius: 8px;
 }
 
+.sign-up-button:hover {
+    background-color: var(--main-purple);
+    color: var(--off-white);
+}
+
+.log-in-button:hover {
+    border-color: var(--main-purple);
+    color: var(--main-purple);
+}
+
 /* Nav */
 .navbar {
     background-color: var(--main-purple);
