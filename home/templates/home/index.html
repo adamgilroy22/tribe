@@ -5,6 +5,7 @@
 <style>
     body {
      background-color: var(--main-purple);
+     padding-top: 0%;
     }
  </style>
 {% endblock %}
@@ -12,16 +13,20 @@
 {% block content %}
 <div class="container h-100">
     <div class="row h-100">
-        <div class="col-8 col-md-6 col-sm-12 my-auto mx-auto text-center">
-            <h1 class="logo-text">Welcome to Tribe</h1>
-            <h4>Find your Tribe, connect for life.</h4>
-            <div class="my-auto">
-                <h4>
-                    <a href="{% url 'account_signup' %}" class="sign-up-button btn btn-lg rounded-0 text-uppercase py-3">Sign Up</a>
-                    <a href="{% url 'account_login' %}" class="log-in-button btn btn-lg rounded-0 text-uppercase py-3">Log In</a>
+        <div class="col col-lg-6 col-md-8 col-sm-12 m-auto text-center p-3">
+            <div class="card border-0">
+                <img src="{% static 'img/landing-image.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title logo-text">Welcome to Tribe</h1>
+                  <h5 class="card-text">Find your Tribe, connect for life.</h5>
+                  <h4>
+                    <a href="{% url 'account_signup' %}" class="sign-up-button btn btn-lg text-uppercase py-2">Sign Up</a>
+                    <a href="{% url 'account_login' %}" class="log-in-button btn btn-lg text-uppercase py-2">Log In</a>
                 </h4>
+                </div>
+              </div>
             </div>
-        </div>
     </div>
 </div>
+
 {% endblock %}

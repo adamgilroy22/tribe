@@ -50,6 +50,19 @@ body > footer {
     color: var(--off-white);
 }
 
+/* Landing page */
+.sign-up-button {
+    background-color: var(--main-purple);
+    color: var(--off-white);
+    border-radius: 8px;
+}
+
+.log-in-button {
+    border-color: var(--main-purple);
+    color: var(--main-purple);
+    border-radius: 8px;
+}
+
 /* Nav */
 .navbar {
     background-color: var(--main-purple);
