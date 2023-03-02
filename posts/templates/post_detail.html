@@ -82,6 +82,18 @@
                 {% endif %}
             </p>
             <p>{{ comment.comment }}</p>
+            <form method="POST" action="{% url 'comment-like' post.pk comment.pk %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button class="like-button" type="submit">
+                    {% if request.user in comment.likes.all %}
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    {% else %}
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    {% endif %}
+                    <span>{{ comment.likes.all.count }}</span>
+                </button>
+            </form>
         </div>
     </div>
     {% endfor %}
