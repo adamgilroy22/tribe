@@ -243,6 +243,7 @@ class LikeComment(LoginRequiredMixin, View):
 
         if not is_liked:
             comment.likes.add(request.user)
+            notification = Notification.objects.create(notification_type=1, from_user=request.user, to_user=comment.author, comment=comment)
 
         if is_liked:
             comment.likes.remove(request.user)

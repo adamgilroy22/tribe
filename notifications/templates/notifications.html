@@ -18,6 +18,13 @@
 		<span class="dropdown-item-close" onclick="removeNotification(`{% url 'notification-delete' notification.pk %}`, `{{ request.path }}`)">&times;</span>
 	</div>
 	{% endif %}
+	{% elif notification.comment %}
+				{% if notification.notification_type == 1 %}
+				<div class="dropdown-item-parent">
+					<a href="{% url 'post-notification' notification.pk notification.comment.post.pk %}">@{{ notification.from_user }} liked your comment</a>
+					<span class="dropdown-item-close" onclick="removeNotification(`{% url 'notification-delete' notification.pk %}`, `{{ request.path }}`)">&times;</span>
+				</div>
+				{% endif %}
 	{% elif notification.thread %}
 				<div class="dropdown-item-parent">
 					<a href="{% url 'thread-notification' notification.pk notification.thread.pk %}">New message from @{{ notification.from_user }}</a>
