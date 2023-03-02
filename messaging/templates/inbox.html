@@ -6,22 +6,17 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-12 p-5">
+        <div class="col-md-12 p-5 text-center">
             <h3>Your Conversations</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 p-5">
             <form method="GET" action="{% url 'create-thread' %}">
-                <button class="btn btn-light p-3" type="submit">Start a Conversation</button>
+                <button class="btn purple-btn p-3" type="submit">New Conversation</button>
             </form>
         </div>
     </div>
 
-    {% for thread in threads.all %}
     <div class="row mb-3">
-        <div class="card col-md-12 p-4 shadow-sm flex-row">
+    {% for thread in threads.all %}
+        <div class="card col-md-3 p-4 m-1 shadow-sm justify-content-center">
             {% if thread.receiver == request.user %}
                 {% if "placeholder" in thread.user.profile.profile_pic.url %}
                 <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
@@ -39,7 +34,11 @@
 			{% endif %}
             <a class="stretched-link" href="{% url 'thread' thread.pk %}"></a>
         </div>
+        {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row mb-3">
+        {% endif %}
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
