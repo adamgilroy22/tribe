@@ -245,11 +245,6 @@ a:hover {
     width: 100%;
 }
 
-.message-container {
-    position: relative;
-    top: 100px;
-}
-
 .empty-text {
     color: var(--dark-grey);
     font-size: 1.5rem;
