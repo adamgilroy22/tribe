@@ -267,9 +267,9 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](documentation/feature03.png)
 
-- **Feature #3**
+- **Notifications**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Whenever a user follows someone, likes a post or comment, comments on a post, or messages someone, the other user receives a notification. The notifications tab on the nav menu shows a red dot with the number of unread notifications and when a user clicks it a dropdown will appear with a list of their notifications. If a user clicks on the notification it will bring them to the user, post, or message thread to do with the notification. If they want to remove a notification without going to the associated page, they can click the red x to delete it.
 
 ![screenshot](documentation/feature03.png)
 
