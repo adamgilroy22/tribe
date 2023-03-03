@@ -217,6 +217,8 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ![screenshot](documentation/testing/liked-post.png)
 
+![screenshot](documentation/testing/delete-icon.png)
+
 - **Individual Posts Page**
 
     - When a user clicks on a post in their feed, they're brought to the individual post page. Here they have the same options as in the feed in being able to like and flag/report a post. Under the post a user can see a list of comments on the post and a form to add their own comment to the post.
@@ -227,67 +229,93 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
     - Post comments are viewed under a post and similar to posts, can be liked. Comments can be deleted by the comment author or post author and edited by the comment author.
 
-![screenshot](documentation/feature03.png)
-
 - **Edit Comment**
 
     - Comments can be edited by the user that created it. Clicking the edit icon brings them to a page where they can see their comment and make changes before hitting a button to save it. There's also a button to bring them back to the post where the comment was made if they hit the edit button by mistake.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/edit-comment.png)
 
 - **Profile**
 
     - The profile contains a card with the user's information including profile picture, background iamge, display name, username, bio, number of posts and number of followers. If the user is viewing their own profile then they'll have an icon to edit their profile. If they're viewing another user's profile then they'll have a button to follow or unfollow that user. The profile also includes a list of posts and a form to create a new post if the user is on their own profile.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/user-profile.png)
+
+![screenshot](documentation/testing/other-profile.png)
+
+![screenshot](documentation/testing/other-profile-following.png)
 
 - **Edit Profile**
 
     - This is where the user can edit their profile details including their display name, bio, profile and background pictures. The user can also remove their profile picture or background image and revert back to the default from here. There's a button to bring them back to their profile if they decide not to make any edits.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/edit-profile.png)
 
 - **Follower List**
 
     - If the user has followers, you can click on the follower count on their profile to see a list of their followers. You can click on the profiles in the list to view them and follow them if you want.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/followers-list.png)
 
 - **Message Inbox**
 
     - Users can access their message inbox from the nav menu. Here a list of users they have messaged/received messages from appears. There's a button to start a new conversation if they have no threads or want to start a new one. 
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/inbox.png)
 
 - **Create Message Thread**
 
     - If the user clicks on the "New Conversation" button in their inbox, they will be brought to a page to create a message thread with a user. When they type a username into the form and click Continue, a new thread is created if the users haven't messaged before and they're brought to their thread if one exists already. If the user enters a username that doesn't exist then an error message pops up letting them know that the user doesn't exist.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/create-thread.png)
+
+![screenshot](documentation/testing/create-thread-error.png)
 
 - **Message Thread**
 
     - This is where users can message back and forward between each other. User messages appear on the left in purple and the person they're talking to's messages appear on the right in black. Each message contains the date and time is was sent.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/message-thread.png)
 
 - **Search**
 
     - Users can search people and posts on the site. If their search matches then a list of both users and posts containing their search will appear. If the search has no results in either then both lists will let the user know there was no match. If there's a user but no post matching the query then the user list will contain matching queries and the post one will let them know there's no posts for their search and the same for the opposite. The page also contains a button to bring the user back to the feed.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/search-page.png)
+
+![screenshot](documentation/testing/full-empty-search.png)
+
+![screenshot](documentation/testing/empty-post-search.png)
+
+![screenshot](documentation/testing/empty-user-search.png)
+
+![screenshot](documentation/testing/report-button.png)
 
 - **Logout**
 
     - When the user wants to finish their session and logout, they can do so from the nav menu. When a user clicks the logout button they're met with a page asking them to confirm they want to log out. They're redirected to the landing page if they click the confirmation button and a message pops up confirming that they've logged out.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/sign-out-page.png)
 
 - **Notifications**
 
     - Whenever a user follows someone, likes a post or comment, comments on a post, or messages someone, the other user receives a notification. The notifications tab on the nav menu shows a red dot with the number of unread notifications and when a user clicks it a dropdown will appear with a list of their notifications. If a user clicks on the notification it will bring them to the user, post, or message thread to do with the notification. If they want to remove a notification without going to the associated page, they can click the red x to delete it.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/empty-notifications.png)
+
+![screenshot](documentation/testing/notifications.png)
+
+![screenshot](documentation/testing/notifications-dropdown.png)
+
+- **Admin Panel**
+
+    - If the logged in user is an admin, an extra icon will appear on their nav menu to view an admin panel page. This page contains a list of all the posts that have been flagged by users. Admins can then decide if the post is to be deleted or unflagged. If there is no flagged posts then the page will let the admin know with a short message.
+
+![screenshot](documentation/testing/admin-panel.png)
+
+![screenshot](documentation/testing/flagged-posts-list.png)
+
+![screenshot](documentation/testing/admin-page-empty.png)
 
 ### Future Features
 
