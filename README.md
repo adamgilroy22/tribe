@@ -116,24 +116,13 @@ Repeat for any addition wireframe pages you have.
 
 ## Features
 
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
 ### Existing Features
 
 - **Landing Page**
 
     - This is the page a user lands on when arriving at the site for the first time or before they've logged in if they don't have an active session. It welcomes them to the site and gives them the option to either sign up for an account or log in to an existing account.
 
-![screenshot](documentation/testing/landing-page.png)
+    ![screenshot](documentation/testing/landing-page.png)
 
 - **Sign Up Page**
 
