@@ -51,8 +51,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark px-2">
       <a class="navbar-brand" href="{% url 'home' %}">TRIBE</a>
       {% if user.is_authenticated %}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -81,8 +80,7 @@
             <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Logout <i
-                class="fa-solid fa-right-from-bracket"></i></a>
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
           </li>
         </ul>
       </div>
@@ -108,32 +106,30 @@
   <!-- Content Goes here -->
   {% endblock content %}
 
+  <footer class="text-center p-3">
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      Developed By <a href="https://github.com/adamgilroy22" target="_blank" rel="nofollow">Adam Gilroy</a> for
+      Code Institute's Portfolio Project 4 - 2023
+    </div>
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="mb-1">
+        <!-- Twitter -->
+        <a class="btn btn-floating m-1" href="https://twitter.com/AdamGilroy22" target="_blank" rel="nofollow" role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-floating m-1" href="https://www.linkedin.com/in/adamgilroy22/" target="_blank" rel="nofollow" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-floating m-1" href="https://github.com/adamgilroy22" target="_blank" rel="nofollow" role="button"><i class="fab fa-github"></i></a>
+      </section>
+    </div>
+  </footer>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/1c241afabe.js" crossorigin="anonymous"></script>
+
 </body>
-<footer class="text-center p-3">
-  <!-- Copyright -->
-  <div class="text-center p-3">
-    Developed By <a href="https://github.com/adamgilroy22" target="_blank" rel="nofollow">Adam Gilroy</a> for
-    Code Institute's Portfolio Project 4 - 2023
-  </div>
-  <!-- Grid container -->
-  <div class="container">
-    <!-- Section: Social media -->
-    <section class="mb-1">
-      <!-- Twitter -->
-      <a class="btn btn-floating m-1" href="https://twitter.com/AdamGilroy22" target="_blank" rel="nofollow"
-        role="button"><i class="fab fa-twitter"></i></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-floating m-1" href="https://www.linkedin.com/in/adamgilroy22/" target="_blank" rel="nofollow"
-        role="button"><i class="fab fa-linkedin-in"></i></a>
-
-      <!-- Github -->
-      <a class="btn btn-floating m-1" href="https://github.com/adamgilroy22" target="_blank" rel="nofollow"
-        role="button"><i class="fab fa-github"></i></a>
-    </section>
-  </div>
-</footer>
-<!-- FontAwesome -->
-<script src="https://kit.fontawesome.com/1c241afabe.js" crossorigin="anonymous"></script>
 
 </html>
