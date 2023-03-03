@@ -133,79 +133,95 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
     - This is the page a user lands on when arriving at the site for the first time or before they've logged in if they don't have an active session. It welcomes them to the site and gives them the option to either sign up for an account or log in to an existing account.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/testing/landing-page.png)
 
 - **Sign Up Page**
 
     - This is where the user can create an account for themselves by entering their e-mail address, desired username and password twice to confirm. If the user accidentally comes to this page instead of the login page they can get to the right page using the link in the card text.
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/testing/sign-up-page.png)
 
 - **Login Page**
 
     - This is where users with existing accounts can log in with either their username or e-mail and password. They can choose to let their browser remember them if they plan on returning to the site on the same device to avoid having to log in again. There's a link to the sign up page too if the user accidentally navigated to this page instead of trying to create an account. If the user forgets their password they can click the link to reset it.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/login-page.png)
 
 - **Reset Password**
 
     - If a user forgets their password, they can reset it by entering the e-mail address they used to sign up. They will then receive an email with a link to set a new password.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/forgot-password-page.png)
+
+![screenshot](documentation/testing/forgot-password-confirmation-page.png)
+
+![screenshot](documentation/testing/password-reset-image.png)
+
+![screenshot](documentation/testing/change-password-page.png)
 
 - **Nav Menu**
 
     - The nav menu contains everything the user will need to navigate the site. The site logo always appears on the site menu with the other items only showing for logged in users. The menu contains an admin panel that only shows up if the logged in user is an admin. From the nav menu, user's can go to their feed, their message inbox, their profile, view their notifications if they have any, search the site for posts and users using the search bar and log out.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/nav-menu.png)
+
+![screenshot](documentation/testing/nav-menu-regular.png)
+
+![screenshot](documentation/testing/nav-menu-mobile.png)
 
 - **Footer**
 
     - The footer appears across the website and includes information about me as the developer with links to my Twitter, Linkedin and GitHub pages. This lets the user get to know me as the developer and connect on these platforms if they wish.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/footer.png)
 
 - **Following Feed**
 
     - This is the user's main feed containing posts only from users they have followed. At the top of the feed there's an area for the user to create a post. There's buttons to switch between the user's following feed and the all posts feed containing every post from every site user. Posts are displayed in chronological order from newest to oldest. If the user isn't following anyone or the people they're following has no posts, a message will appear saying "It's very quiet here..." which will prompt the user to follow more users to start seeing posts in this feed.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/following-feed.png)
+
+![screenshot](documentation/testing/empty-following-feed.png)
 
 - **Add Post Form**
 
     - This is where the user will create their posts. It appears in both the following and all posts feed along with the user's own profile. There's a prompt in the form for the user to "Share with your tribe...".
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/new-post-form.png)
 
 - **Feed Switcher**
 
     - This appears on both the following feed and the all posts feed. It allows the user to switch between both feeds with ease. The feed that the user is currently viewing will have a purple background to let the user know what feed they're on.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/feed-switcher.png)
 
 - **All Posts Feed**
 
     - This feed shows every single post on the website from all users. It allows the user to find new users to follow and connect with.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/all-posts-feed.png)
 
 - **Pagination**
 
     - Both following and all posts feeds as well as profiles have pagination implemented so if more than 10 posts appear in the feed then buttons appear at the bottom to split the feed into individual pages with a maximum of 10 posts on a page. This is to increase the user experience and make the site content easier to digest. If the user is on the first page of pagination then only one button will appear saying "Older Posts" and if they're on the last page then a single button will appear and say "Newer Posts" if there's more than 2 pages of posts then anything in between with contain both buttons to change between pages.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/pagination-buttons.png)
 
 - **Posts**
 
     - The site wouldn't be much without user posts. Posts are found in the users feeds. From here, users can like posts, report/flag posts, see when the post was created or delete a post if they're the original author. The number of times a post has been liked is displayed next to the like button and when a user has liked a post it's filled with colour to let the user know they've already liked it. It returns to an outline if the user unlikes it.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/individual-post.png)
+
+![screenshot](documentation/testing/unliked-post.png)
+
+![screenshot](documentation/testing/liked-post.png)
 
 - **Individual Posts Page**
 
     - When a user clicks on a post in their feed, they're brought to the individual post page. Here they have the same options as in the feed in being able to like and flag/report a post. Under the post a user can see a list of comments on the post and a form to add their own comment to the post.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/testing/post-detail-page.png)
 
 - **Comments**
 
