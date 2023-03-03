@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 /**
  * Automatically close messages after time
  */

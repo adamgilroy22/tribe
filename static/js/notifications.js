@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 function showNotifications() {
     const container = document.getElementById('notification-container');
 
@@ -5,7 +7,7 @@ function showNotifications() {
         container.classList.remove('d-none');
     } else {
         container.classList.add('d-none');
-    };
+    }
 }
 
 function getCookie(name) {
