@@ -214,6 +214,8 @@ Repeat for any addition wireframe pages you have.
 
     ![screenshot](documentation/testing/post-detail-page.png)
 
+    ![screenshot](documentation/testing/report-button.png)
+
 - **Comments**
 
     - Post comments are viewed under a post and similar to posts, can be liked. Comments can be deleted by the comment author or post author and edited by the comment author.
@@ -277,8 +279,6 @@ Repeat for any addition wireframe pages you have.
     ![screenshot](documentation/testing/empty-post-search.png)
 
     ![screenshot](documentation/testing/empty-user-search.png)
-
-    ![screenshot](documentation/testing/report-button.png)
 
 - **Logout**
 
