@@ -128,91 +128,91 @@ Repeat for any addition wireframe pages you have.
 
     - This is where the user can create an account for themselves by entering their e-mail address, desired username and password twice to confirm. If the user accidentally comes to this page instead of the login page they can get to the right page using the link in the card text.
 
-![screenshot](documentation/testing/sign-up-page.png)
+    ![screenshot](documentation/testing/sign-up-page.png)
 
 - **Login Page**
 
     - This is where users with existing accounts can log in with either their username or e-mail and password. They can choose to let their browser remember them if they plan on returning to the site on the same device to avoid having to log in again. There's a link to the sign up page too if the user accidentally navigated to this page instead of trying to create an account. If the user forgets their password they can click the link to reset it.
 
-![screenshot](documentation/testing/login-page.png)
+    ![screenshot](documentation/testing/login-page.png)
 
 - **Reset Password**
 
     - If a user forgets their password, they can reset it by entering the e-mail address they used to sign up. They will then receive an email with a link to set a new password.
 
-![screenshot](documentation/testing/forgot-password-page.png)
+    ![screenshot](documentation/testing/forgot-password-page.png)
 
-![screenshot](documentation/testing/forgot-password-confirmation-page.png)
+    ![screenshot](documentation/testing/forgot-password-confirmation-page.png)
 
-![screenshot](documentation/testing/password-reset-image.png)
+    ![screenshot](documentation/testing/password-reset-image.png)
 
-![screenshot](documentation/testing/change-password-page.png)
+    ![screenshot](documentation/testing/change-password-page.png)
 
 - **Nav Menu**
 
     - The nav menu contains everything the user will need to navigate the site. The site logo always appears on the site menu with the other items only showing for logged in users. The menu contains an admin panel that only shows up if the logged in user is an admin. From the nav menu, user's can go to their feed, their message inbox, their profile, view their notifications if they have any, search the site for posts and users using the search bar and log out.
 
-![screenshot](documentation/testing/nav-menu.png)
+    ![screenshot](documentation/testing/nav-menu.png)
 
-![screenshot](documentation/testing/nav-menu-regular.png)
+    ![screenshot](documentation/testing/nav-menu-regular.png)
 
-![screenshot](documentation/testing/nav-menu-mobile.png)
+    ![screenshot](documentation/testing/nav-menu-mobile.png)
 
 - **Footer**
 
     - The footer appears across the website and includes information about me as the developer with links to my Twitter, Linkedin and GitHub pages. This lets the user get to know me as the developer and connect on these platforms if they wish.
 
-![screenshot](documentation/testing/footer.png)
+    ![screenshot](documentation/testing/footer.png)
 
 - **Following Feed**
 
     - This is the user's main feed containing posts only from users they have followed. At the top of the feed there's an area for the user to create a post. There's buttons to switch between the user's following feed and the all posts feed containing every post from every site user. Posts are displayed in chronological order from newest to oldest. If the user isn't following anyone or the people they're following has no posts, a message will appear saying "It's very quiet here..." which will prompt the user to follow more users to start seeing posts in this feed.
 
-![screenshot](documentation/testing/following-feed.png)
+    ![screenshot](documentation/testing/following-feed.png)
 
-![screenshot](documentation/testing/empty-following-feed.png)
+    ![screenshot](documentation/testing/empty-following-feed.png)
 
 - **Add Post Form**
 
     - This is where the user will create their posts. It appears in both the following and all posts feed along with the user's own profile. There's a prompt in the form for the user to "Share with your tribe...".
 
-![screenshot](documentation/testing/new-post-form.png)
+    ![screenshot](documentation/testing/new-post-form.png)
 
 - **Feed Switcher**
 
     - This appears on both the following feed and the all posts feed. It allows the user to switch between both feeds with ease. The feed that the user is currently viewing will have a purple background to let the user know what feed they're on.
 
-![screenshot](documentation/testing/feed-switcher.png)
+    ![screenshot](documentation/testing/feed-switcher.png)
 
 - **All Posts Feed**
 
     - This feed shows every single post on the website from all users. It allows the user to find new users to follow and connect with.
 
-![screenshot](documentation/testing/all-posts-feed.png)
+    ![screenshot](documentation/testing/all-posts-feed.png)
 
 - **Pagination**
 
     - Both following and all posts feeds as well as profiles have pagination implemented so if more than 10 posts appear in the feed then buttons appear at the bottom to split the feed into individual pages with a maximum of 10 posts on a page. This is to increase the user experience and make the site content easier to digest. If the user is on the first page of pagination then only one button will appear saying "Older Posts" and if they're on the last page then a single button will appear and say "Newer Posts" if there's more than 2 pages of posts then anything in between with contain both buttons to change between pages.
 
-![screenshot](documentation/testing/pagination-buttons.png)
+    ![screenshot](documentation/testing/pagination-buttons.png)
 
 - **Posts**
 
     - The site wouldn't be much without user posts. Posts are found in the users feeds. From here, users can like posts, report/flag posts, see when the post was created or delete a post if they're the original author. The number of times a post has been liked is displayed next to the like button and when a user has liked a post it's filled with colour to let the user know they've already liked it. It returns to an outline if the user unlikes it.
 
-![screenshot](documentation/testing/individual-post.png)
+    ![screenshot](documentation/testing/individual-post.png)
 
-![screenshot](documentation/testing/unliked-post.png)
+    ![screenshot](documentation/testing/unliked-post.png)
 
-![screenshot](documentation/testing/liked-post.png)
+    ![screenshot](documentation/testing/liked-post.png)
 
-![screenshot](documentation/testing/delete-icon.png)
+    ![screenshot](documentation/testing/delete-icon.png)
 
 - **Individual Posts Page**
 
     - When a user clicks on a post in their feed, they're brought to the individual post page. Here they have the same options as in the feed in being able to like and flag/report a post. Under the post a user can see a list of comments on the post and a form to add their own comment to the post.
 
-![screenshot](documentation/testing/post-detail-page.png)
+    ![screenshot](documentation/testing/post-detail-page.png)
 
 - **Comments**
 
@@ -222,89 +222,89 @@ Repeat for any addition wireframe pages you have.
 
     - Comments can be edited by the user that created it. Clicking the edit icon brings them to a page where they can see their comment and make changes before hitting a button to save it. There's also a button to bring them back to the post where the comment was made if they hit the edit button by mistake.
 
-![screenshot](documentation/testing/edit-comment.png)
+    ![screenshot](documentation/testing/edit-comment.png)
 
 - **Profile**
 
     - The profile contains a card with the user's information including profile picture, background iamge, display name, username, bio, number of posts and number of followers. If the user is viewing their own profile then they'll have an icon to edit their profile. If they're viewing another user's profile then they'll have a button to follow or unfollow that user. The profile also includes a list of posts and a form to create a new post if the user is on their own profile.
 
-![screenshot](documentation/testing/user-profile.png)
+    ![screenshot](documentation/testing/user-profile.png)
 
-![screenshot](documentation/testing/other-profile.png)
+    ![screenshot](documentation/testing/other-profile.png)
 
-![screenshot](documentation/testing/other-profile-following.png)
+    ![screenshot](documentation/testing/other-profile-following.png)
 
 - **Edit Profile**
 
     - This is where the user can edit their profile details including their display name, bio, profile and background pictures. The user can also remove their profile picture or background image and revert back to the default from here. There's a button to bring them back to their profile if they decide not to make any edits.
 
-![screenshot](documentation/testing/edit-profile.png)
+    ![screenshot](documentation/testing/edit-profile.png)
 
 - **Follower List**
 
     - If the user has followers, you can click on the follower count on their profile to see a list of their followers. You can click on the profiles in the list to view them and follow them if you want.
 
-![screenshot](documentation/testing/followers-list.png)
+    ![screenshot](documentation/testing/followers-list.png)
 
 - **Message Inbox**
 
     - Users can access their message inbox from the nav menu. Here a list of users they have messaged/received messages from appears. There's a button to start a new conversation if they have no threads or want to start a new one. 
 
-![screenshot](documentation/testing/inbox.png)
+    ![screenshot](documentation/testing/inbox.png)
 
 - **Create Message Thread**
 
     - If the user clicks on the "New Conversation" button in their inbox, they will be brought to a page to create a message thread with a user. When they type a username into the form and click Continue, a new thread is created if the users haven't messaged before and they're brought to their thread if one exists already. If the user enters a username that doesn't exist then an error message pops up letting them know that the user doesn't exist.
 
-![screenshot](documentation/testing/create-thread.png)
+    ![screenshot](documentation/testing/create-thread.png)
 
-![screenshot](documentation/testing/create-thread-error.png)
+    ![screenshot](documentation/testing/create-thread-error.png)
 
 - **Message Thread**
 
     - This is where users can message back and forward between each other. User messages appear on the left in purple and the person they're talking to's messages appear on the right in black. Each message contains the date and time is was sent.
 
-![screenshot](documentation/testing/message-thread.png)
+    ![screenshot](documentation/testing/message-thread.png)
 
 - **Search**
 
     - Users can search people and posts on the site. If their search matches then a list of both users and posts containing their search will appear. If the search has no results in either then both lists will let the user know there was no match. If there's a user but no post matching the query then the user list will contain matching queries and the post one will let them know there's no posts for their search and the same for the opposite. The page also contains a button to bring the user back to the feed.
 
-![screenshot](documentation/testing/search-page.png)
+    ![screenshot](documentation/testing/search-page.png)
 
-![screenshot](documentation/testing/full-empty-search.png)
+    ![screenshot](documentation/testing/full-empty-search.png)
 
-![screenshot](documentation/testing/empty-post-search.png)
+    ![screenshot](documentation/testing/empty-post-search.png)
 
-![screenshot](documentation/testing/empty-user-search.png)
+    ![screenshot](documentation/testing/empty-user-search.png)
 
-![screenshot](documentation/testing/report-button.png)
+    ![screenshot](documentation/testing/report-button.png)
 
 - **Logout**
 
     - When the user wants to finish their session and logout, they can do so from the nav menu. When a user clicks the logout button they're met with a page asking them to confirm they want to log out. They're redirected to the landing page if they click the confirmation button and a message pops up confirming that they've logged out.
 
-![screenshot](documentation/testing/sign-out-page.png)
+    ![screenshot](documentation/testing/sign-out-page.png)
 
 - **Notifications**
 
     - Whenever a user follows someone, likes a post or comment, comments on a post, or messages someone, the other user receives a notification. The notifications tab on the nav menu shows a red dot with the number of unread notifications and when a user clicks it a dropdown will appear with a list of their notifications. If a user clicks on the notification it will bring them to the user, post, or message thread to do with the notification. If they want to remove a notification without going to the associated page, they can click the red x to delete it.
 
-![screenshot](documentation/testing/empty-notifications.png)
+    ![screenshot](documentation/testing/empty-notifications.png)
 
-![screenshot](documentation/testing/notifications.png)
+    ![screenshot](documentation/testing/notifications.png)
 
-![screenshot](documentation/testing/notifications-dropdown.png)
+    ![screenshot](documentation/testing/notifications-dropdown.png)
 
 - **Admin Panel**
 
     - If the logged in user is an admin, an extra icon will appear on their nav menu to view an admin panel page. This page contains a list of all the posts that have been flagged by users. Admins can then decide if the post is to be deleted or unflagged. If there is no flagged posts then the page will let the admin know with a short message.
 
-![screenshot](documentation/testing/admin-panel.png)
+    ![screenshot](documentation/testing/admin-panel.png)
 
-![screenshot](documentation/testing/flagged-posts-list.png)
+    ![screenshot](documentation/testing/flagged-posts-list.png)
 
-![screenshot](documentation/testing/admin-page-empty.png)
+    ![screenshot](documentation/testing/admin-page-empty.png)
 
 ### Future Features
 
@@ -327,34 +327,23 @@ This is definitely a project I want to revisit in the future and add some extra 
 
 ## Tools & Technologies Used
 
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [JavaScript](https://www.javascript.com) used for user interaction on the site for automatically closing Django Messages and to handle the notification dropdown and notification delete functions.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
-- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) used to help generate the Markdown files.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Canva](https://www.canva.com/) used to create the images seen on the landing page, login, sign-up, logout and password reset pages. Also used to create the default user profile and background images.
 
 ## Database Design
 
