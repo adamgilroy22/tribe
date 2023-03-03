@@ -275,17 +275,22 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Future Features
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
+This is definitely a project I want to revisit in the future and add some extra features to. These features have been logged as Won't Have in my MoSCoW prioritization.
 
-- Cool new feature #1
-    - Any additional notes about this feature.
-- Cool new feature #2
-    - Any additional notes about this feature.
-- Cool new feature #3
-    - Any additional notes about this feature.
+- Reshare Posts
+    - I'd like to be able to add a feature that allows users to reshare other posts with their followers.
+- Follow Suggestions
+    - I'd like to create a section that suggests people for users to follow based on who they already follow and the posts that they interact with.
+- Group Messaging
+    - I'd like to add a feature that allows users to create groups for messaging and message between multiple users at once.
+- Voice and Video Calling
+    - I'd like to extend the messaging feature further by including voice and video calls between users.
+- Private Profiles
+    - I'd like to add a feature that allows a user to set their profile to private to only be viewed by followers that the user must accept.
+- Dark Mode
+    - I'd like to implement a feature that allows the user to change the site's colour scheme to one with a dark background with lighter text to allow the site to be viewed easily in darker settings.
+- User Suspension
+    - I'd like to further increase the admin's ability to moderate the website by allowing them to suspend users if they post innapropriate content. This will disable the user from posting or interacting with other users for a set amount of time or permanently for severe incidents.
 
 ## Tools & Technologies Used
 
