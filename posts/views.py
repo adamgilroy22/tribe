@@ -19,6 +19,7 @@ class FollowingPostListView(LoginRequiredMixin, View):
     following and sort by time posted
     and create new posts using post form
     """
+
     def get(self, request, *args, **kwargs):
         current_user = request.user
 
@@ -66,6 +67,7 @@ class AllPostListView(LoginRequiredMixin, View):
     Display all site posts on feed sorted by time posted
     and create new posts using post form
     """
+
     def get(self, request, *args, **kwargs):
 
         all_posts = Post.objects.all().order_by('-posted_on')
@@ -109,6 +111,7 @@ class PostDetailView(LoginRequiredMixin, View):
     """
     View individual posts in more detail
     """
+
     def get(self, request, pk, *args, **kwargs):
         post = Post.objects.get(pk=pk)
         form = CommentForm()
@@ -140,7 +143,8 @@ class PostDetailView(LoginRequiredMixin, View):
                 messages.add_message(request, messages.SUCCESS,
                                      'Your comment has been submitted')
                 notification = Notification.objects.create(
-                    notification_type=2, from_user=request.user, to_user=post.author, post=post)
+                    notification_type=2, from_user=request.user,
+                    to_user=post.author, post=post)
                 return redirect(request.META['HTTP_REFERER'])
             else:
                 messages.add_message(
@@ -168,7 +172,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         post = self.get_object()
-        return self.request.user == post.author or self.request.user.is_superuser
+        return self.request.user == post.author or self.request.user.is_superuser  # noqa
 
 
 class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -184,7 +188,7 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         comment = self.get_object()
-        return self.request.user == comment.author or self.request.user == comment.post.author or self.request.user.is_superuser
+        return self.request.user == comment.author or self.request.user == comment.post.author or self.request.user.is_superuser  # noqa
 
 
 class CommentEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -208,6 +212,7 @@ class LikePost(LoginRequiredMixin, View):
     """
     Like and unlike posts
     """
+
     def post(self, request, pk, *args, **kwargs):
         post = Post.objects.get(pk=pk)
 
@@ -219,7 +224,9 @@ class LikePost(LoginRequiredMixin, View):
 
         if not is_liked:
             post.likes.add(request.user)
-            notification = Notification.objects.create(notification_type=1, from_user=request.user, to_user=post.author, post=post)
+            notification = Notification.objects.create(
+                notification_type=1, from_user=request.user,
+                to_user=post.author, post=post)
 
         if is_liked:
             post.likes.remove(request.user)
@@ -232,6 +239,7 @@ class LikeComment(LoginRequiredMixin, View):
     """
     Like and unlike comments
     """
+
     def post(self, request, pk, *args, **kwargs):
         comment = Comment.objects.get(pk=pk)
 
@@ -243,7 +251,9 @@ class LikeComment(LoginRequiredMixin, View):
 
         if not is_liked:
             comment.likes.add(request.user)
-            notification = Notification.objects.create(notification_type=1, from_user=request.user, to_user=comment.author, comment=comment)
+            notification = Notification.objects.create(
+                notification_type=1, from_user=request.user,
+                to_user=comment.author, comment=comment)
 
         if is_liked:
             comment.likes.remove(request.user)
@@ -256,6 +266,7 @@ class ReportPost(LoginRequiredMixin, View):
     """
     Report posts
     """
+
     def post(self, request, pk, *args, **kwargs):
         post = Post.objects.get(pk=pk)
 
@@ -282,9 +293,11 @@ class FlaggedPostListView(LoginRequiredMixin, UserPassesTestMixin, View):
     Display all flagged/reported posts on feed
     only accessable by an admin
     """
+
     def get(self, request, *args, **kwargs):
 
-        flagged_posts = Post.objects.filter(is_flagged=True).order_by('-posted_on')
+        flagged_posts = Post.objects.filter(
+            is_flagged=True).order_by('-posted_on')
 
         paginator = Paginator(flagged_posts, 10)
         page_num = request.GET.get('page')

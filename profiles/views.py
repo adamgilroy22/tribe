@@ -84,7 +84,9 @@ class AddFollower(LoginRequiredMixin, View):
         profile = Profile.objects.get(pk=pk)
         profile.followers.add(request.user)
 
-        notification = Notification.objects.create(notification_type=3, from_user=request.user, to_user=profile.user)
+        notification = Notification.objects.create(notification_type=3,
+                                                   from_user=request.user,
+                                                   to_user=profile.user)
 
         messages.add_message(request, messages.SUCCESS,
                              'User followed')

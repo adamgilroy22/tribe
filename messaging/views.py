@@ -12,8 +12,9 @@ class MessageThreads(View):
     """
     View message threads
     """
+
     def get(self, request, *args, **kwargs):
-        threads = MessageThread.objects.filter(Q(user=request.user) | Q(receiver=request.user))
+        threads = MessageThread.objects.filter(Q(user=request.user) | Q(receiver=request.user))  # noqa
 
         context = {
             'threads': threads,
@@ -26,6 +27,7 @@ class CreateThread(View):
     """
     Create a new message thread
     """
+
     def get(self, request, *args, **kwargs):
         form = ThreadForm()
 
@@ -42,11 +44,15 @@ class CreateThread(View):
 
         try:
             receiver = User.objects.get(username=username)
-            if MessageThread.objects.filter(user=request.user, receiver=receiver).exists():
-                thread = MessageThread.objects.filter(user=request.user, receiver=receiver)[0]
+            if MessageThread.objects.filter(user=request.user,
+                                            receiver=receiver).exists():
+                thread = MessageThread.objects.filter(
+                    user=request.user, receiver=receiver)[0]
                 return redirect('thread', pk=thread.pk)
-            elif MessageThread.objects.filter(user=receiver, receiver=request.user).exists():
-                thread = MessageThread.objects.filter(user=receiver, receiver=request.user)[0]
+            elif MessageThread.objects.filter(user=receiver,
+                                              receiver=request.user).exists():
+                thread = MessageThread.objects.filter(
+                    user=receiver, receiver=request.user)[0]
                 return redirect('thread', pk=thread.pk)
 
             if form.is_valid():
@@ -67,6 +73,7 @@ class ThreadView(View):
     """
     View individual message thread with another user
     """
+
     def get(self, request, pk, *args, **kwargs):
         form = MessageForm()
         thread = MessageThread.objects.get(pk=pk)
@@ -84,6 +91,7 @@ class CreateMessage(View):
     """
     Create and send a message
     """
+
     def post(self, request, pk, *args, **kwargs):
         thread = MessageThread.objects.get(pk=pk)
         if thread.receiver == request.user:
