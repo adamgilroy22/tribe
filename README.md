@@ -428,13 +428,11 @@ The following are the models created for Tribe
 ### GitHub Projects
 
 [GitHub Projects](https://github.com/adamgilroy22/tribe/projects) served as an Agile tool for this project.
-It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+It isn't a specialized tool, but with the right tags and project creation/issue assignments, it was made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, user stories were used to map out the development progress of the project using the basic Kanban board. It helped me to see the backlog of work I needed to complete and move tasks across as I worked on them before testing and signing off to finish them.
 
-Consider adding a basic screenshot of your Projects Board.
-
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/tribe-project-board.png)
 
 ### GitHub Issues
 
