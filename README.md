@@ -1,5 +1,9 @@
 # __Tribe - Portfolio Project 4__
-A social media app built with Django where users can sign up, create posts, view other people's posts, follow other users, like and comment on posts and delete their posts.
+![mockup](documentation/mockup.png)
+
+Tribe is a social media app built with Django where users can sign up, create posts, view other people's posts, follow other users, message other users, like and comment on posts and delete their posts.
+
+The aim of this project was to build a site that allows users to easily sign up and connect with their friends.
 
 Developed by Adam Gilroy
 
