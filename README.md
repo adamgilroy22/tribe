@@ -631,10 +631,10 @@ All media files on the website including default profile/background images and i
 
 ### Acknowledgements
 
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
+This project tested me to my limits at times and I could not have seen it to completion without the support of the following people.
 
-- I would like to thank my Code Institute mentor, [John/Jane Doe](https://github.com/username) for their support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my spouse/partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his belief, support, and words of encouragement throughout the development of both this project and all my projects to date.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support that kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank my parents, for their constant support and belief throughout this course and project.
+- I would like to thank my partner Cayanne, for believing in me, and encouraging me as I make this transition into software development.
+- I would like to thank everyone who tested Tribe during development, for their feedback and words of encouragement.
