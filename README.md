@@ -437,19 +437,17 @@ Through it, user stories were used to map out the development progress of the pr
 ### GitHub Issues
 
 [GitHub Issues](https://github.com/adamgilroy22/tribe/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories.
-
-It also helped with milestone iterations on a weekly basis.
-
-Consider adding a screenshot of your Open and Closed Issues.
+There, I used my own **User Story Template** to manage user stories and creted a *Bug* tag to track and monitor issues on the site to be worked on.
 
 - [Open Issues](https://github.com/adamgilroy22/tribe/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](documentation/tribe-open-issues.png)
 
 - [Closed Issues](https://github.com/adamgilroy22/tribe/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/tribe-closed-issues-1.png)
+
+    ![screenshot](documentation/tribe-closed-issues-2.png)
 
 ### MoSCoW Prioritization
 
