@@ -25,4 +25,3 @@ class MessageModel(models.Model):
         User, on_delete=models.CASCADE, related_name='+')
     message_content = models.CharField(max_length=500)
     sent_at = models.DateTimeField(default=timezone.now)
-    is_read = models.BooleanField(default=False)
