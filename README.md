@@ -216,6 +216,12 @@ Repeat for any addition wireframe pages you have.
 
     ![screenshot](documentation/testing/report-button.png)
 
+- **Delete Post**
+
+    - Posts can be deleted by the post author by clicking on the delete icon. When deleting a post, the user is brought to a confirmation page to avoid posts being deleted accidentally. There's a button to bring them back to the post if the user changes their mind about deleting their post.
+
+    ![screenshot](documentation/testing/post-delete.png)
+
 - **Comments**
 
     - Post comments are viewed under a post and similar to posts, can be liked. Comments can be deleted by the comment author or post author and edited by the comment author.
@@ -225,6 +231,12 @@ Repeat for any addition wireframe pages you have.
     - Comments can be edited by the user that created it. Clicking the edit icon brings them to a page where they can see their comment and make changes before hitting a button to save it. There's also a button to bring them back to the post where the comment was made if they hit the edit button by mistake.
 
     ![screenshot](documentation/testing/edit-comment.png)
+
+- **Delete Comment**
+
+    - Comments can be deleted by the comment author or the original posts author by clicking on the delete icon. Similar to when deleting a post, users are brought to a confirmation page to avoid comments being deleted accidentally. There's a button to bring them back to the post they commented on if the user changes their mind about deleting the comment.
+
+    ![screenshot](documentation/testing/comment-delete.png)
 
 - **Profile**
 
@@ -594,27 +606,14 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
 ## Credits
 
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
 ### Content
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
 
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
+| [Dev Handbook](https://www.devhandbook.com/django/user-profile/) | user profile creation | creating a user profile that extends Django's User model |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
