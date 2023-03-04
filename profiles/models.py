@@ -20,7 +20,6 @@ class Profile(models.Model):
     bg_pic = CloudinaryField('Background Picture',
                              default='placeholder',
                              blank=True)
-    is_suspended = models.BooleanField(default=False, editable=True)
     followers = models.ManyToManyField(User, blank=True,
                                        related_name='followers')
 
