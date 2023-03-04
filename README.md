@@ -344,53 +344,84 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Canva](https://www.canva.com/) used to create the images seen on the landing page, login, sign-up, logout and password reset pages. Also used to create the default user profile and background images.
+- [Gmail](https://www.google.com/gmail/about/) used to create an email address to send password reset emails from.
 
 ## Database Design
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
+I created an entity relationship diagram using [Diagrams.net](https://www.diagrams.net/). This helped me to visualize the relationships between my data structures and made the development process easier as I had everything mapped out in front of me for reference to avoid having to reference each models.py file individually.
 
-Using your defined models (one example below), create an ERD with the relationships identified.
+### Entity Relationship Diagram
 
-```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+![screenshot](documentation/tribe-entity-relationship-diagram.png)
 
-    def __str__(self):
-        return self.name
-```
+### Models
 
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
+The following are the models created for Tribe
 
-![screenshot](documentation/erd.png)
+- **Allauth User Model**
+    - The User model was built using [Django's Allauth library](https://django-allauth.readthedocs.io/en/latest/overview.html)
+    - When a user is created, they're automatically assigned a profile through the Profile model.
 
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-- Table: **Product**
+- **Profile**
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+    | **FK** | user | OneToOne | FK to **User** model |
+    | | display_name | CharField | |
+    | | bio | TextField | |
+    | | profile_pic | CloudinaryField | |
+    | | bg_pic | CloudinaryField | |
+    | | followers | ManyToMany | M2M to **User** model |
+
+- **Post**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | author | ForeignKey | FK to **User** model |
+    | | content | TextField | |
+    | | posted_on | DateTimeField | |
+    | | likes | ManyToMany | M2M to **User** model |
+    | | is_flagged | BooleanField | |
+
+- **Comment**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | author | ForeignKey | FK to **User** model |
+    | | comment | TextField | |
+    | | posted_on | DateTimeField | |
+    | | likes | ManyToMany | M2M to **User** model |
+    | **FK** | post | ForeignKey | FK to **Post** model |
+
+- **MessageThread**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | sender | ForeignKey | FK to **User** model |
+    | **FK** | recipient | ForeignKey | FK to **User** model |
+
+- **MessageModel**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | thread | ForeignKey | FK to **MessageThread** model |
+    | **FK** | message_sender | ForeignKey | FK to **User** model |
+    | **FK** | message_receiver | ForeignKey | FK to **User** model |
+    | | message_content | CharField | |
+    | | sent_at | DateTimeField | |
+
+- **Notification**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | | notification_type | IntegerField | |
+    | **FK** | to_user | ForeignKey | FK to **User** model |
+    | **FK** | from_user | ForeignKey | FK to **User** model |
+    | **FK** | post | ForeignKey | FK to **Post** model |
+    | **FK** | comment | ForeignKey | FK to **Comment** model |
+    | **FK** | thread | ForeignKey | FK to **MessageThread** model |
+    | | date | DateTimeField | |
+    | | user_has_seen | BooleanField | |
 
 ## Agile Development Process
 
