@@ -360,6 +360,7 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Canva](https://www.canva.com/) used to create the images seen on the landing page, login, sign-up, logout and password reset pages. Also used to create the default user profile and background images.
+- [Techsini](https://techsini.com/) used to create the mockup image used in my readme.
 - [Gmail](https://www.google.com/gmail/about/) used to create an email address to send password reset emails from.
 
 ## Database Design
@@ -618,16 +619,11 @@ You can fork this repository by using the following steps:
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Dev Handbook](https://www.devhandbook.com/django/user-profile/) | user profile creation | creating a user profile that extends Django's User model |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [YouTube](https://www.youtube.com/watch?v=_JKWYkz597c&t=1s&ab_channel=LegionScript) | notifications | tutorial for setting up notifications to be sent on the site |
+| [YouTube](https://www.youtube.com/watch?v=oxrQdZ5KqW0&ab_channel=LegionScript) | messages | tutorial for setting up messaging between users on the site |
+| [YouTube](https://www.youtube.com/watch?v=sF7go6tcKbc&t=1s&ab_channel=LegionScript) | messages | part 2 of tutorial for setting up messaging between users on the site |
+| [bbbootstrap](https://bbbootstrap.com/snippets/user-profile-sidebar-12290681) | profile card | inspiration for the profile card design |
+| [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/39dfbd4ba6ac42168b5df88d69c32f02/) | password reset email | Boutique ado project section on emails |
 
 ### Media
 
