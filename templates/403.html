@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+  html,
+  body {
+    background-color: var(--main-purple);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row h-100">
+    <div class="col col-lg-6 col-md-8 col-sm-12 m-auto text-center p-3">
+      <div class="card border-0">
+        <img src="{% static 'img/logout-image.png' %}" class="card-img-top" alt="Tribe logout page image">
+        <div class="card-body">
+          <h1 class="card-title logo-text">Oop, page not found</h1>
+          <h5 class="card-text">Looks like you've lost your tribe.</h5>
+          <h4>
+            <a href="{% url 'home' %}" class="sign-up-button btn btn-lg text-uppercase py-2">Back</a>
+        </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
