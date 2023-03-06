@@ -322,6 +322,14 @@ Repeat for any addition wireframe pages you have.
 
     ![screenshot](documentation/testing/admin-page-empty.png)
 
+- **Error Pages**
+
+    - If a user ends up on a page that either doesn't exist or that they shouldn't be on (regular user using admin panel link or trying to delete other user's post through a link) then they'll be shown an error page with a button to bring them back to their feed.
+
+    ![screenshot](documentation/testing/403-screenshot.png)
+
+    ![screenshot](documentation/testing/404-screenshot.png)
+
 ### Future Features
 
 This is definitely a project I want to revisit in the future and add some extra features to. These features have been logged as Won't Have in my MoSCoW prioritization.
