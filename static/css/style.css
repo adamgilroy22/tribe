@@ -238,13 +238,6 @@ a:hover {
 }
 
 /* Messages */
-.message-head {
-    position: fixed;
-    z-index: 1;
-    top: 15px;
-    width: 100%;
-}
-
 .empty-text {
     color: var(--dark-grey);
     font-size: 1.5rem;
