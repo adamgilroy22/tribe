@@ -372,6 +372,7 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [Canva](https://www.canva.com/) used to create the images seen on the landing page, login, sign-up, logout and password reset pages. Also used to create the default user profile and background images.
 - [Techsini](https://techsini.com/) used to create the mockup image used in my readme.
 - [Gmail](https://www.google.com/gmail/about/) used to create an email address to send password reset emails from.
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) used to check contrast between colours on the site
 
 ## Database Design
 
