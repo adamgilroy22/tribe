@@ -330,6 +330,8 @@ Repeat for any addition wireframe pages you have.
 
     ![screenshot](documentation/testing/404-screenshot.png)
 
+    ![screenshot](documentation/testing/500-screenshot.png)
+
 ### Future Features
 
 This is definitely a project I want to revisit in the future and add some extra features to. These features have been logged as Won't Have in my MoSCoW prioritization.
