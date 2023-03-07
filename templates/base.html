@@ -78,7 +78,7 @@
           <li class="nav-item">
             <form class="d-flex" role="search" method="GET" action="{% url 'search' %}">
               <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" value="{{ request.GET.query }}">
-              <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button aria-label="search site" class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
           </li>
           <li class="nav-item">
