@@ -155,67 +155,117 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-Flask/Django:
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| Home Page | | | | |
+| **Home Page** | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery Page | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact Page | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
+| **Sign Up** | | | | |
+| | Click on Sign Up button on home page | Redirection to Sign Up page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
+| | Click Sign Up button on sign up page | Redirects user to feed | Pass | |
 | | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
+| **Log In** | | | | |
+| | Click on the Login button on home page | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
+| | Click Login button on login page | Redirects user to feed | Pass | |
+| | Click Forgot Password | Redirects user to password reset page | Pass | |
+| **Password Reset** | | | | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Click Reset Password button | Sends email with instructions to reset password | Pass | |
+| **Log Out** | | | | |
 | | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
+| **Own Profile** | | | | |
+| | Click on Profile button in nav | User will be redirected to their Profile page | Pass | |
+| | Click on the Edit icon | User will be redirected to the edit profile page | Pass | |
+| | Click on the Back To Feed button | User will be redirected to their feed | Pass | |
+| | Click on followers | User will be redirected to followers list page | Pass | |
+| | Click on a post | User will be redirected to the individual post page | Pass | |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | |
+| | Type text into the add a post form and click send | New post is created by the user | Pass | |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass | |
+| **Other Profile** | | | | |
+| | Click on the follow button | User will follow current profile they're on and button will change to say unfollow | Pass | Profile owner receives a notification letting them know someone has followed them and followers count will increase by 1 |
+| | Click on the unfollow button | User will unfollow current profile they're on and button will change to say follow | Pass | Followers count will decrease by 1 |
+| | Click on the Back To Feed button | User will be redirected to their feed | Pass | |
+| | Click on followers | User will be redirected to followers list page | Pass | |
+| | Brute forcing the URL to edit another user's profile | User should be given an error | Pass | Redirects user to error page |
+| | Click on a post | User will be redirected to the individual post page | Pass | |
+| **Following Feed** | | | | |
+| | Click on a post | User will be redirected to the individual post page | Pass | |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass | |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1 | Pass | Post author receives a notification letting them know someone has liked their post |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass | |
+| | Click flag button | Message appears telling the user the post has been reported | Pass | Post is added to the Admin Panel page for admins to review |
+| | Type text into the add a post form and click send | New post is created by the user | Pass | |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass | |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | |
+| | Brute forcing the URL to delete another user's post | User should be given an error | Pass | Redirects user to error page |
+| | Click All Posts button | User is redirected to feed containing all posts from every user on the website | Pass | |
+| **All Posts Feed** | | | | |
+| | Click on a post | User will be redirected to the individual post page | Pass | |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass | |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1 | Pass | Post author receives a notification letting them know someone has liked their post |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass | |
+| | Click flag button | Message appears telling the user the post has been reported | Pass | Post is added to the Admin Panel page for admins to review |
+| | Type text into the add a post form and click send | New post is created by the user | Pass | |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass | |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | |
+| | Brute forcing the URL to delete another user's post | User should be given an error | Pass | Redirects user to error page |
+| | Click Following button | User is redirected to feed containing posts only from users they have followed | Pass | |
+| **Individual Post Page** | | | | |
+| | Click on the username on the post | User will be redirected to the post author's profile | Pass | |
+| | Click on the Back To Feed button | User will be redirected to their feed | Pass | |
+| | Click the like button on the post | Like button will fill with colour and the like count will increase by 1 | Pass | Post author receives a notification letting them know someone has liked their post |
+| | Click the like button on the post if already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass | |
+| | Click flag button | Message appears telling the user the post has been reported | Pass | Post is added to the Admin Panel page for admins to review |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | |
+| | Brute forcing the URL to delete another user's post | User should be given an error | Pass | Redirects user to error page |
+| | Type text into Leave Your Reply form and click Send | Comment is created under current post | Pass | Post author will receive a notification to tell them they have a new comment on their post |
+| **Delete Post Page** | | | | |
+| | Click on the Delete button | Post will be permanently deleted | Pass | |
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | |
+| **Comments** | | | | |
+| | Click on the username on a comment | User will be redirected to the comment author's profile | Pass | |
+| | Click the like button on a comment | Like button will fill with colour and the like count will increase by 1 | Pass | Comment author receives a notification letting them know someone has liked their comment |
+| | Click the like button on the comment if already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass | |
+| | Click delete icon on own comment or comment on own post | User is redirected to comment delete confirmation page | Pass | |
+| | Brute forcing the URL to delete another user's comment if not on your post | User should be given an error | Pass | Redirects user to error page |
+| | Click edit icon on own comment | User is redirected to comment edit page | Pass | |
+| | Brute forcing the URL to edit another user's comment | User should be given an error | Pass | Redirects user to error page |
+| **Delete Comment Page** | | | | |
+| | Click on the Delete button | Comment will be permanently deleted | Pass | |
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | |
+| **Edit Comment Page** | | | | |
+| | Fill in comment form and click submit | Original comment will be edited | Pass | |
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | |
+| **Error Page** | | | | |
+| | Click on Back To Your Tribe button | User will be redirected to their feed | Pass | |
+| **Inbox** | | | | |
+| | Click on Messages button in nav | User will be redirected to their inbox | Pass | |
+| | Click on New Conversation button | User will be redirected to the create message thread page | Pass | |
+| | Click on any previos message threads | User will be redirected to relevant thread | Pass | |
+| **Create Thread** | | | | |
+| | Type valid username into form and click continue | User will be redirected message thread with username they typed | Pass | If a thread already exists, they will be brought to that and if not a new thread will be created between the two users |
+| | Type an invalid username into form and click continue | Message will appear letting user know that username doesn't exist | Pass | |
+| | Click continue without entering anything into form | User will be asked to enter something into the form before continuing | Pass | |
+| | Click Back to Inbox button | User will be redirected to their inbox | Pass | |
+| **Message Thread** | | | | |
+| | Type text into form and click Send Message | Content in form will be sent to the other user as a message | Pass | Other user will receive a notification to tell them they have a new message |
+| | Click on other user's name | User will be redirected to other user's profile | Pass | |
+| **Search Page** | | | | |
+| | Type text into search form into nav and click the search icon | User is directed to a page with a list of both users and posts containing their search query | Pass | If there are no users and/or posts containing the query the page will let the user know there was no results in either or both for their query |
+| | Click on user's name in either user or post list | User will be redirected to other user's profile | Pass | |
+| **Admin Panel** | | | | |
+| | Click on Admin Panel button in nav | User will be redirected to the Admin Panel page with a list of flagged posts | Pass | Admin Panel button only appears on the nav if the logged in user is an admin |
+| | Brute forcing the URL to access Admin Panel as a regular user | User should be given an error | Pass | Redirects user to error page |
+| | Click delete icon on post in list | User is redirected to post delete confirmation page | Pass | Admin's are able to delete any post on the site regardless of if they are the author or not |
+| | Click flag button | Message appears telling the user the post has been unflagged and the post is removed from the admin panel page | Pass | Only admins can unflag a post, if a regular user clicks the flag on an already reported post they will get the post flagged message but nothing else will happen as the post will already be in the admin panel |
+| | Click on user's name on post | User will be redirected to other user's profile | Pass | |
 
 ## User Story Testing
 
