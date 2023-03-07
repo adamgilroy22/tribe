@@ -47,7 +47,7 @@
                     <form method="POST" action="{% url 'post-report' post.pk %}">
                         {% csrf_token %}
                         <input type="hidden" name="next" value="{{ request.path }}">
-                        <button class="like-button" type="submit">
+                        <button aria-label="report post" class="like-button" type="submit">
                             <i class="fa-regular fa-flag"></i>
                         </button>
                     </form>
