@@ -19,16 +19,16 @@
         <div class="card col-md-3 p-4 m-1 shadow-sm justify-content-center">
             {% if thread.receiver == request.user %}
                 {% if "placeholder" in thread.user.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40">
                 {% else %}
-                <img src="{{ thread.user.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{{ thread.user.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40">
                 {% endif %}
                 <h5>@{{ thread.user }}</h5>
 			{% else %}
                 {% if "placeholder" in thread.receiver.profile.profile_pic.url %}
-                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{% static 'img/default-profile-pic.png' %}" alt="profile image" class="rounded-circle post-img" height="40" width="40">
                 {% else %}
-                <img src="{{ thread.receiver.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40" />
+                <img src="{{ thread.receiver.profile.profile_pic.url }}" alt="profile image" class="rounded-circle post-img" height="40" width="40">
                 {% endif %}
                 <h5>@{{ thread.receiver }}</h5>
 			{% endif %}
