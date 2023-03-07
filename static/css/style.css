@@ -228,7 +228,7 @@ a:hover {
     right: 0;
     font-size: 1.8rem;
     padding-right: 5px;
-    transform: 0.3s;
+    transition: 0.3s;
 }
 
 .dropdown-item-close:hover {
