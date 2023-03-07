@@ -166,7 +166,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
 | | Click Sign Up button on sign up page | Redirects user to feed | Pass | |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
 | **Log In** | | | | |
 | | Click on the Login button on home page | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
@@ -269,24 +268,35 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up. | ![screenshot](documentation/testing/landing-page.png) |
+| As a new site user, I would like to sign up for the site and create an account, so that I can create my profile and start using the site. | ![screenshot](documentation/testing/sign-up-page.png) |
+| As a registered user, I would like to log in to my account, so that I can access the site. | ![screenshot](documentation/testing/login-page.png) |
+| As a registered user, I would like to log out of my account, so that I can end my session on my current device. | ![screenshot](documentation/testing/sign-out-page.png) |
+| As a registered user, I would like to reset my password if I forget it, so that I can regain access to my account. | ![screenshot](documentation/testing/forgot-password-page.png) ![screenshot](documentation/testing/forgot-password-confirmation-page.png) ![screenshot](documentation/testing/password-reset-image.png) ![screenshot](documentation/testing/change-password-page.png) |
+| As a registered user, I would like to update my profile picture and cover photo, so that I can help other users identify me. | ![screenshot](documentation/testing/edit-profile.png) |
+| As a registered user, I would like to edit my profile bio, so that I can further personalize my profile. | ![screenshot](documentation/testing/edit-profile.png) |
+| As a registered user, I would like to follow other users, so that I can view their posts on my feed. | ![screenshot](documentation/testing/follow-button.png) |
+| As a registered user, I would like to unfollow other users, so that I can remove their posts from my feed. | ![screenshot](documentation/testing/unfollow-button.png) |
+| As a registered user, I would like to create new posts, so that I can share my thoughts with my followers. | ![screenshot](documentation/testing/new-post-form.png) |
+| As a registered user, I would like to delete my posts, so that I can remove content that I no longer want published. | ![screenshot](documentation/testing/delete-icon.png) ![screenshot](documentation/testing/post-delete.png) |
+| As a registered user, I would like to view posts from people I follow, so that I can keep up to date with them. | ![screenshot](documentation/testing/following-feed.png) |
+| As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post. | ![screenshot](documentation/testing/liked-post.png) |
+| As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion. | ![screenshot](documentation/testing/post-detail-page.png) |
+| As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published. | ![screenshot](documentation/testing/comment-delete.png) |
+| As a registered user, I would like to click on a post to expand it and see the psot comments, so that I can further engage with posts. | ![screenshot](documentation/testing/post-detail-page.png) |
+| As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is. | ![screenshot](documentation/testing/individual-post.png) |
+| As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow. | ![screenshot](documentation/testing/search-page.png) |
+| As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button. | ![screenshot](documentation/testing/nav-menu-regular.png) |
+| As a registered user, I would like to message other users, so that I can communicate with them privately. | ![screenshot](documentation/testing/inbox.png) ![screenshot](documentation/testing/create-thread.png) ![screenshot](documentation/testing/message-thread.png) |
+| As a registered user, I would like to delete other people's comments on my posts, so that I can remove comments I don't want on my posts. | ![screenshot](documentation/testing/comment-delete.png) |
+| As a registered user, I would like to report or flag posts, so that I can notify the admins of content that might not be allowed on the site. | ![screenshot](documentation/testing/report-button.png) |
+| As a registered user, I would like to be notified when someone follows me, interacts with my posts, or messages me, so that I can interact back with them and keep up to date with my content. | ![screenshot](documentation/testing/notifications.png) ![screenshot](documentation/testing/notifications-dropdown.png) |
+| As a registered user, I would like to like other people's comments on posts, so that I can let them know I enjoyed their comment. | ![screenshot](documentation/testing/comment-like.png) |
+| As a site administrator, I should be able to delete posts and comments from any user, so that I can moderate the site's content. | ![screenshot](documentation/testing/delete-icon.png) ![screenshot](documentation/testing/post-delete.png) ![screenshot](documentation/testing/comment-delete.png) |
+| As a site administrator, I should be able to access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted. | ![screenshot](documentation/testing/admin-panel.png) ![screenshot](documentation/testing/flagged-posts-list.png) |
+| As a site administrator, I should be able to unflag a post if deemed not needed for deletion, so that I can remove it from the list of flagged posts. | ![screenshot](documentation/testing/report-button.png) ![screenshot](documentation/testing/admin-page-empty.png) |
 
 ## Automated Testing
 
