@@ -2,62 +2,52 @@
 
 Return back to the [README.md](README.md) file.
 
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
 ## Code Validation
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
 
 ### HTML
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-- If you are copying/pasting your HTML code, use this link: https://validator.w3.org/#validate_by_input
-- (*recommended*) If you are using the live deployed site pages, use this link: https://validator.w3.org/#validate_by_uri
+As my project uses Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
+it will not validate properly if I copy and paste into the HTML validator straight from my source files.
 
-It's recommended to validate the live pages (each of them) using the deployed URL.
-This will give you a custom URL as well, which you can use on your testing documentation.
-It makes it easier to return back to a page to validate it again in the future.
-The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamgilroy22.github.io%2Ftribe%2Findex.html
-
-Sample HTML code validation documentation (tables are extremely helpful!):
-
-| Page | W3C URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamgilroy22.github.io%2Ftribe%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamgilroy22.github.io%2Ftribe%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadamgilroy22.github.io%2Ftribe%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
-
-**IMPORTANT**: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
-will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to
+Usually in order to properly validate these types of files, it's recommended to
 [validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
 
-Unfortunately, pages that require a user to be logged-in and authenticated (CRUD functionality),
-will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
-access to login to your pages.
-In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
+Unfortunately, nearly all of the pages on this site require a user to be logged-in and authenticated,
+and will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
+access to login to the pages.
+
+In order to properly validate my HTML pages with Jinja syntax for authenticated pages, I followed these steps:
 
 - Navigate to the deployed pages which require authentication
 - Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
 - This will display the entire "compiled" code, without any Jinja syntax.
 - Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
 - Repeat this process for every page that requires a user to be logged-in/authenticated.
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftribe.herokuapp.com%2F) | ![screenshot](documentation/testing/html-validation-home.png) | Pass: No Errors |
+| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftribe.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/testing/html-validation-sign-up.png) | Pass: No Errors |
+| Log In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftribe.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/testing/html-validation-sign-in.png) | Pass: No Errors |
+| Forgot Password | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftribe.herokuapp.com%2Faccounts%2Fpassword%2Freset%2F) | ![screenshot](documentation/testing/html-validation-forgot-password.png) | Pass: No Errors |
+| Following Feed | n/a | ![screenshot](documentation/testing/html-validation-feed.png) | Pass: No Errors |
+| All Posts Feed | n/a | ![screenshot](documentation/testing/html-validation-all-posts-feed.png) | Pass: No Errors |
+| Messaging Inbox | n/a | ![screenshot](documentation/testing/html-validation-inbox.png) | Pass: No Errors |
+| Messaging Thread | n/a | ![screenshot](documentation/testing/html-validation-message-thread.png) | Pass: No Errors |
+| Create Thread | n/a | ![screenshot](documentation/testing/html-validation-create-thread.png) | Pass: No Errors |
+| User Profile | n/a | ![screenshot](documentation/testing/html-validation-user-profile.png) | Pass: No Errors |
+| Other Profile | n/a | ![screenshot](documentation/testing/html-validation-other-profile.png) | Pass: No Errors |
+| Edit Profile | n/a | ![screenshot](documentation/testing/html-validation-edit-profile.png) | Pass: No Errors |
+| Followers List | n/a | ![screenshot](documentation/testing/html-validation-followers-list.png) | Pass: No Errors |
+| Individual Post | n/a | ![screenshot](documentation/testing/html-validation-individual-post.png) | Pass: No Errors |
+| Delete Post | n/a | ![screenshot](documentation/testing/html-validation-delete-post.png) | Pass: No Errors |
+| Edit Comment | n/a | ![screenshot](documentation/testing/html-validation-edit-comment.png) | Pass: No Errors |
+| Delete Comment | n/a | ![screenshot](documentation/testing/html-validation-delete-comment.png) | Pass: No Errors |
+| Admin Panel | n/a | ![screenshot](documentation/testing/html-validation-admin-panel.png) | Pass: No Errors |
+| Search | n/a | ![screenshot](documentation/testing/html-validation-search.png) | Pass: No Errors |
+| Sign Out | n/a | ![screenshot](documentation/testing/html-validation-sign-out.png) | Pass: No Errors |
 
 ### CSS
 
