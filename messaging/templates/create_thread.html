@@ -21,7 +21,7 @@
         <div class="col-md-5 col-sm-12">
             <form method="POST">
                 {% csrf_token %}
-                <p class="text-center">Enter the username for the person you would like to message.</p>
+                <p class="text-center">Enter the username of the person you would like to message.</p>
                 {{ form | crispy }}
                 <div class="d-grid gap-2">
                     <button class="btn purple-btn mt-3" type="submit">Continue</button>
