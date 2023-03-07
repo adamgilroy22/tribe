@@ -259,6 +259,14 @@ Defensive programming was manually tested with the below user acceptance testing
 | **Search Page** | | | | |
 | | Type text into search form into nav and click the search icon | User is directed to a page with a list of both users and posts containing their search query | Pass | If there are no users and/or posts containing the query the page will let the user know there was no results in either or both for their query |
 | | Click on user's name in either user or post list | User will be redirected to other user's profile | Pass | |
+| **Notifications** | | | | |
+| | Click on Notifications button in nav when there's no notifications | Nothing should happen | Pass | |
+| | Click on Notifications button in nav when there is notifications | A dropdown showing notifications should appear | Pass | |
+| | Click on new message notification | User will be redirected to relevant thread | Pass | Notification is deleted from list after being clicked on |
+| | Click on new post like notification | User will be redirected to their post that was liked | Pass | Notification is deleted from list after being clicked on |
+| | Click on new post comment notification | User will be redirected to their post that was commented on | Pass | Notification is deleted from list after being clicked on |
+| | Click on new comment like notification | User will be redirected to the post that their comment was liked on | Pass | Notification is deleted from list after being clicked on |
+| | Click on X next to notification | Notification will be removed from notifications list | Pass | |
 | **Admin Panel** | | | | |
 | | Click on Admin Panel button in nav | User will be redirected to the Admin Panel page with a list of flagged posts | Pass | Admin Panel button only appears on the nav if the logged in user is an admin |
 | | Brute forcing the URL to access Admin Panel as a regular user | User should be given an error | Pass | Redirects user to error page |
