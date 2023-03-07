@@ -67,7 +67,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 - As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post.
 - As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion.
 - As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published.
-- As a registered user, I would like to click on a post to expand it and see likes/comments, so that I can further engage with posts.
+- As a registered user, I would like to click on a post to expand it and see the comments, so that I can further engage with posts.
 - As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is.
 - As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow.
 - As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button.
