@@ -18,7 +18,7 @@ I wanted to keep the design quite simple on this site so as to not distract the 
 - `#5122b4` used as the primary site colour.
 - `#f5f5f5` used for the site background and button text.
 - `#333333` used for the site text and footer background.
-- `#b366ff` used for footer links against the dark grey colour and for the background of images on the homepage/login/sign up/logout pages.
+- `#bf87f7` used for footer links against the dark grey colour and for the background of images on the homepage/login/sign up/logout pages.
 - `#d9534f` used for the trash icon, notification icon and warning buttons.
 
 I used [coolors.co](https://coolors.co/5122b4-f5f5f5-333333-b366ff-d9534f) to generate my colour palette.
@@ -30,7 +30,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 ```css
 :root {
     --main-purple: #5122b4;
-    --light-purple: #b366ff;
+    --light-purple: #bf87f7;
     --accent-red: #d9534f;
     --dark-grey: #333333;
     --off-white: #f5f5f5;
