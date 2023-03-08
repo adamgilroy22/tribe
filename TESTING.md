@@ -276,6 +276,8 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
+The following are user stories I've implemented with screenshots to prove
+
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up. | ![screenshot](documentation/testing/landing-page.png) |
@@ -305,6 +307,18 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site administrator, I should be able to delete posts and comments from any user, so that I can moderate the site's content. | ![screenshot](documentation/testing/delete-icon.png) ![screenshot](documentation/testing/post-delete.png) ![screenshot](documentation/testing/comment-delete.png) |
 | As a site administrator, I should be able to access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted. | ![screenshot](documentation/testing/admin-panel.png) ![screenshot](documentation/testing/flagged-posts-list.png) |
 | As a site administrator, I should be able to unflag a post if deemed not needed for deletion, so that I can remove it from the list of flagged posts. | ![screenshot](documentation/testing/report-button.png) ![screenshot](documentation/testing/admin-page-empty.png) |
+
+The following are user stories I wasn't able to implement and have labeled as Wont Have in my MoSCoW prioritization
+
+| User Story | Screenshot |
+| --- | --- |
+| As a registered user I want to be able to put the site into dark mode so that I can make the website easier to see at night. | N/A |
+| As a registered user I want to be able to make my profile private so that I can hide my content from people who don't follow me. | N/A |
+| As a registered user I want to be able to see suggestions of who my friends are following so that I can find profiles I might want to follow instead of manually searching every time. | N/A |
+| As a registered user I want to be able to video call my friends so that I can communicate with them more efficiently than instant messaging. | N/A |
+| As a registered user I want to be able to create group chats with my friends so that I can message multiple friends simultaneously. | N/A |
+| As a registered user I want to be able to reshare other people's posts so that I can share them with my followers. | N/A |
+| As a site administrator, I should be able to suspend user accounts who violate site guidelines, so that I can prevent users from constantly breaking the site rules. | N/A |
 
 ## Automated Testing
 
