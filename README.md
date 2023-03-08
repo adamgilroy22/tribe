@@ -21,7 +21,7 @@ I wanted to keep the design quite simple on this site so as to not distract the 
 - `#bf87f7` used for footer links against the dark grey colour and for the background of images on the homepage/login/sign up/logout pages.
 - `#d9534f` used for the trash icon, notification icon and warning buttons.
 
-I used [coolors.co](https://coolors.co/5122b4-f5f5f5-333333-b366ff-d9534f) to generate my colour palette.
+I used [coolors.co](https://coolors.co/5122b4-f5f5f5-333333-bf87f7-d9534f) to generate my colour palette.
 
 ![screenshot](documentation/tribe-colour-scheme.png)
 
@@ -444,7 +444,6 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site for automatically closing Django Messages and to handle the notification dropdown and notification delete functions.
 - [Python](https://www.python.org) used as the back-end programming language.
