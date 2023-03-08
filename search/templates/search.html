@@ -2,6 +2,8 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block extra_title %}- Results for: {{ request.GET.query }}{% endblock %}
+
 
 {% block content %}
 <div class="container">
