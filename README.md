@@ -85,11 +85,6 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ## Wireframes
 
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Home Page Wireframes
@@ -100,23 +95,109 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
 
-### About Page Wireframes
+### Sign Up Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-sign-up.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-sign-up.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-sign-up.png) |
 
-### Contact Page Wireframes
+### Sign In Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-sign-in.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-sign-in.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-sign-in.png) |
 
-Repeat for any addition wireframe pages you have.
+### Following Feed Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-feed.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-feed.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-feed.png) |
+
+### All Posts Feed Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-all-posts-feed.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-all-posts-feed.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-all-posts-feed.png) |
+
+### User Profile Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-user-profile.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-user-profile.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-user-profile.png) |
+
+### Other Profile Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-other-profile.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-other-profile.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-other-profile.png) |
+
+### Inbox Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-inbox.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-inbox.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-inbox.png) |
+
+### Create Thread Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-create-thread.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-create-thread.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-create-thread.png) |
+
+### Message Thread Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-message-thread.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-message-thread.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-message-thread.png) |
+
+### Search Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-search.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-search.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-search.png) |
+
+### Notifications Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-notifications.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-notifications.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-notifications.png) |
+
+### Admin Panel Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-admin-panel.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-admin-panel.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-admin-panel.png) |
+
+### Sign Out Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-sign-out.png) |
+| Tablet | ![screenshot](documentation/wireframes/tablet-sign-out.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-sign-out.png) |
 
 ## Features
 
@@ -373,6 +454,7 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [Techsini](https://techsini.com/) used to create the mockup image used in my readme.
 - [Gmail](https://www.google.com/gmail/about/) used to create an email address to send password reset emails from.
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) used to check contrast between colours on the site
+- [Balsamiq](https://balsamiq.com/wireframes) used to design my site wireframes.
 
 ## Database Design
 
