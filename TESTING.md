@@ -440,109 +440,47 @@ This can be used for both "fixed" and "unresolved" issues.
 
 ## Bugs
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-For JavaScript and Python applications, it's best to screenshot the errors to include them as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bug01.png)
-
-    - To fix this, I _____________________.
-
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
-
-    ![screenshot](documentation/bug02.png)
-
-    - To fix this, I _____________________.
-
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
-
-    ![screenshot](documentation/bug03.png)
-
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
 ### GitHub **Issues**
 
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/adamgilroy22/tribe/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
+I tracked my bugs on GitHub Issues using the BUG label
 
 **Fixed Bugs**
 
-All previously closed/fixed bugs can be tracked [here](https://github.com/adamgilroy22/tribe/issues?q=is%3Aissue+is%3Aclosed).
+All previously closed/fixed bugs can be tracked [here](https://github.com/adamgilroy22/tribe/issues?q=is%3Aissue+is%3Aclosed+label%3ABug).
 
 | Bug | Status |
 | --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/adamgilroy22/tribe/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/adamgilroy22/tribe/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/adamgilroy22/tribe/issues/3) | Closed |
+| [Error when user adds multiple comments to a post](https://github.com/adamgilroy22/tribe/issues/38) | Closed |
+| [Delete icon not clickable on feed, brings to post detail page](https://github.com/adamgilroy22/tribe/issues/39) | Closed |
+| [Redirect to wrong post after comment deletion](https://github.com/adamgilroy22/tribe/issues/40) | Closed |
+| [Error with profile link in navbar](https://github.com/adamgilroy22/tribe/issues/41) | Closed |
+| [Error in profile](https://github.com/adamgilroy22/tribe/issues/42) | Closed |
+| [Default profile image not displaying](https://github.com/adamgilroy22/tribe/issues/43) | Closed |
+| [Error on site if not logged in](https://github.com/adamgilroy22/tribe/issues/44) | Closed |
+| [Form doesn't clear after submitting post or comment](https://github.com/adamgilroy22/tribe/issues/45) | Closed |
+| [CSS not showing on deployed heroku app](https://github.com/adamgilroy22/tribe/issues/46) | Closed |
+| [Nav menu not showing on smaller screens](https://github.com/adamgilroy22/tribe/issues/47) | Closed |
+| [Redirect to wrong post after hitting back to post on comment delete and edit](https://github.com/adamgilroy22/tribe/issues/48) | Closed |
+| [Profiles not working after follower count added](https://github.com/adamgilroy22/tribe/issues/49) | Closed |
+| [Profile image of follower not displaying correctly in some follower lists](https://github.com/adamgilroy22/tribe/issues/50) | Closed |
+| [Profile nav link doesn't bring you to users profile if clicked when viewing someone else's profile](https://github.com/adamgilroy22/tribe/issues/51) | Closed |
+| [Error when clicking new follower notification](https://github.com/adamgilroy22/tribe/issues/52) | Closed |
+| [Long strings in posts breaks layout](https://github.com/adamgilroy22/tribe/issues/53) | Closed |
 
 **Open Issues**
 
-Any remaining open issues can be tracked [here](https://github.com/adamgilroy22/tribe/issues).
+Any remaining open issues can be tracked [here](https://github.com/adamgilroy22/tribe/issues). All bugs were closed so any remaining issues are user stories that I have labeled as Won't Have in my MoSCoW priotitization.
 
-| Bug | Status |
+| Issue | Status |
 | --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/adamgilroy22/tribe/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/adamgilroy22/tribe/issues/5) | Open |
+| [USER STORY: Dark Mode](https://github.com/adamgilroy22/tribe/issues/27) | Open |
+| [USER STORY: Make Profile Private](https://github.com/adamgilroy22/tribe/issues/29) | Open |
+| [USER STORY: Suspend Users (Admin)](https://github.com/adamgilroy22/tribe/issues/32) | Open |
+| [USER STORY: Follow Suggestions](https://github.com/adamgilroy22/tribe/issues/34) | Open |
+| [USER STORY: Video Calls](https://github.com/adamgilroy22/tribe/issues/35) | Open |
+| [USER STORY: Group Messages](https://github.com/adamgilroy22/tribe/issues/36) | Open |
+| [USER STORY: Reshare Posts](https://github.com/adamgilroy22/tribe/issues/37) | Open |
 
 ## Unfixed Bugs
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
 
 There are no remaining bugs that I am aware of.
