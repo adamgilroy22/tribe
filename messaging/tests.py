@@ -4,6 +4,9 @@ from .forms import ThreadForm, MessageForm
 
 
 class TestThreadForm(TestCase):
+    """
+    Test if create thread form is left blank when submitted
+    """
     def test_username_is_required(self):
         form = ThreadForm({'username': ""})
         self.assertFalse(form.is_valid())
@@ -12,6 +15,9 @@ class TestThreadForm(TestCase):
 
 
 class TestMessageForm(TestCase):
+    """
+    Test if message thread form is left blank when submitted
+    """
     def test_message_is_required(self):
         form = MessageForm({'username': ""})
         self.assertFalse(form.is_valid())
