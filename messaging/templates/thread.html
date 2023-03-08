@@ -2,6 +2,14 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block extra_title %}
+{% if thread.receiver == request.user %}
+- Messaging @{{ thread.user }}
+{% else %}
+- Messaging @{{ thread.receiver }}
+{% endif %}
+{% endblock %}
+
 
 {% block content %}
 <div class="container">
