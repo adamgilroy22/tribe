@@ -49,39 +49,46 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### New Site Users
 
-- As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up.
-- As a new site user, I would like to sign up for the site and create an account, so that I can create my profile and start using the site.
+- As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up. `(MUST HAVE)`
+- As a new site user, I would like to sign up for the site and create an account, so that I can create my profile and start using the site. `(MUST HAVE)`
 
 ### Registered Users
 
-- As a registered user, I would like to log in to my account, so that I can access the site.
-- As a registered user, I would like to log out of my account, so that I can end my session on my current device.
-- As a registered user, I would like to reset my password if I forget it, so that I can regain access to my account.
-- As a registered user, I would like to update my profile picture and cover photo, so that I can help other users identify me.
-- As a registered user, I would like to edit my profile bio, so that I can further personalize my profile.
-- As a registered user, I would like to follow other users, so that I can view their posts on my feed.
-- As a registered user, I would like to unfollow other users, so that I can remove their posts from my feed.
-- As a registered user, I would like to create new posts, so that I can share my thoughts with my followers.
-- As a registered user, I would like to delete my posts, so that I can remove content that I no longer want published.
-- As a registered user, I would like to view posts from people I follow, so that I can keep up to date with them.
-- As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post.
-- As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion.
-- As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published.
-- As a registered user, I would like to click on a post to expand it and see the comments, so that I can further engage with posts.
-- As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is.
-- As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow.
-- As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button.
-- As a registered user, I would like to message other users, so that I can communicate with them privately.
-- As a registered user, I would like to delete other people's comments on my posts, so that I can remove comments I don't want on my posts.
-- As a registered user, I would like to report or flag posts, so that I can notify the admins of content that might not be allowed on the site.
-- As a registered user, I would like to be notified when someone follows me, interacts with my posts, or messages me, so that I can interact back with them and keep up to date with my content.
-- As a registered user, I would like to like other people's comments on posts, so that I can let them know I enjoyed their comment.
+- As a registered user, I would like to log in to my account, so that I can access the site. `(MUST HAVE)`
+- As a registered user, I would like to log out of my account, so that I can end my session on my current device. `(MUST HAVE)`
+- As a registered user, I would like to reset my password if I forget it, so that I can regain access to my account. `(MUST HAVE)`
+- As a registered user, I would like to update my profile picture and cover photo, so that I can help other users identify me. `(MUST HAVE)`
+- As a registered user, I would like to edit my profile bio, so that I can further personalize my profile. `(MUST HAVE)`
+- As a registered user, I would like to follow other users, so that I can view their posts on my feed. `(MUST HAVE)`
+- As a registered user, I would like to unfollow other users, so that I can remove their posts from my feed. `(MUST HAVE)`
+- As a registered user, I would like to create new posts, so that I can share my thoughts with my followers. `(MUST HAVE)`
+- As a registered user, I would like to delete my posts, so that I can remove content that I no longer want published. `(MUST HAVE)`
+- As a registered user, I would like to view posts from people I follow, so that I can keep up to date with them. `(MUST HAVE)`
+- As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button. `(MUST HAVE)`
+- As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post. `(SHOULD HAVE)`
+- As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion. `(SHOULD HAVE)`
+- As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published. `(SHOULD HAVE)`
+- As a registered user, I would like to click on a post to expand it and see the comments, so that I can further engage with posts. `(SHOULD HAVE)`
+- As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is. `(SHOULD HAVE)`
+- As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow. `(SHOULD HAVE)`
+- As a registered user, I would like to delete other people's comments on my posts, so that I can remove comments I don't want on my posts. `(SHOULD HAVE)`
+- As a registered user, I would like to be notified when someone follows me, interacts with my posts, or messages me, so that I can interact back with them and keep up to date with my content. `(SHOULD HAVE)`
+- As a registered user, I would like to like other people's comments on posts, so that I can let them know I enjoyed their comment. `(SHOULD HAVE)`
+- As a registered user, I would like to message other users, so that I can communicate with them privately. `(COULD HAVE)`
+- As a registered user, I would like to report or flag posts, so that I can notify the admins of content that might not be allowed on the site. `(COULD HAVE)`
+- As a registered user I want to be able to put the site into dark mode so that I can make the website easier to see at night. `(WONT HAVE)`
+- As a registered user I want to be able to make my profile private so that I can hide my content from people who don't follow me. `(WONT HAVE)`
+- As a registered user I want to be able to see suggestions of who my friends are following so that I can find profiles I might want to follow instead of manually searching every time. `(WONT HAVE)`
+- As a registered user I want to be able to video call my friends so that I can communicate with them more efficiently than instant messaging. `(WONT HAVE)`
+- As a registered user I want to be able to create group chats with my friends so that I can message multiple friends simultaneously. `(WONT HAVE)`
+- As a registered user I want to be able to reshare other people's posts so that I can share them with my followers. `(WONT HAVE)`
 
 ### Site Admin
 
-- As a site administrator, I should be able to delete posts and comments from any user, so that I can moderate the site's content.
-- As a site administrator, I should be able to access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted.
-- As a site administrator, I should be able to unflag a post if deemed not needed for deletion, so that I can remove it from the list of flagged posts.
+- As a site administrator, I should be able to delete posts and comments from any user, so that I can moderate the site's content. `(SHOULD HAVE)`
+- As a site administrator, I should be able to access a page only for admins to see flagged user posts, so that I can see a list of posts that possibly need to be deleted. `(COULD HAVE)`
+- As a site administrator, I should be able to unflag a post if deemed not needed for deletion, so that I can remove it from the list of flagged posts. `(COULD HAVE)`
+- As a site administrator, I should be able to suspend user accounts who violate site guidelines, so that I can prevent users from constantly breaking the site rules. `(WONT HAVE)`
 
 ## Wireframes
 
