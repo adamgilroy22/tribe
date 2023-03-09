@@ -6,6 +6,10 @@ from profiles.models import Profile
 
 
 class Search(View):
+    """
+    Get a list of profiles and posts
+    containing the user's search query
+    """
     def get(self, request, *args, **kwargs):
         query = self.request.GET.get('query')
 
