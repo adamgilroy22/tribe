@@ -8,6 +8,9 @@ from messaging.models import MessageThread
 
 
 class PostNotification(View):
+    """
+    Notifications to do with posts
+    """
     def get(self, request, notification_pk, post_pk, *args, **kwargs):
         notification = Notification.objects.get(pk=notification_pk)
         post = Post.objects.get(pk=post_pk)
@@ -19,6 +22,9 @@ class PostNotification(View):
 
 
 class FollowNotification(View):
+    """
+    Notifications for when someone follows you
+    """
     def get(self, request, notification_pk, profile_pk, *args, **kwargs):
         notification = Notification.objects.get(pk=notification_pk)
         profile = Profile.objects.get(pk=profile_pk)
@@ -30,6 +36,9 @@ class FollowNotification(View):
 
 
 class ThreadNotification(View):
+    """
+    Notifications for when someone messages you
+    """
     def get(self, request, notification_pk, object_pk, *args, **kwargs):
         notification = Notification.objects.get(pk=notification_pk)
         thread = MessageThread.objects.get(pk=object_pk)
@@ -41,6 +50,9 @@ class ThreadNotification(View):
 
 
 class RemoveNotification(View):
+    """
+    Delete notification by setting it as seen
+    """
     def delete(self, request, notification_pk, *args, **kwargs):
         notification = Notification.objects.get(pk=notification_pk)
 
