@@ -96,115 +96,227 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Home Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
+<details>
+<summary>Click to View Home Page wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-home.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-home.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-home.png)
+
+</details>
 
 ### Sign Up Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-sign-up.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-sign-up.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-sign-up.png) |
+<details>
+<summary>Click to View Sign Up Page wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-sign-up.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-sign-up.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-sign-up.png)
+
+</details>
 
 ### Sign In Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-sign-in.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-sign-in.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-sign-in.png) |
+<details>
+<summary>Click to View Sign In Page wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-sign-in.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-sign-in.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-sign-in.png)
+
+</details>
 
 ### Following Feed Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-feed.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-feed.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-feed.png) |
+<details>
+<summary>Click to View Following Feed wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-feed.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-feed.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-feed.png)
+
+</details>
 
 ### All Posts Feed Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-all-posts-feed.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-all-posts-feed.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-all-posts-feed.png) |
+<details>
+<summary>Click to View All Posts Feed wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-all-posts-feed.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-all-posts-feed.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-all-posts-feed.png)
+
+</details>
 
 ### User Profile Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-user-profile.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-user-profile.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-user-profile.png) |
+<details>
+<summary>Click to View User Profile wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-user-profile.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-user-profile.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-user-profile.png)
+
+</details>
 
 ### Other Profile Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-other-profile.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-other-profile.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-other-profile.png) |
+<details>
+<summary>Click to View Other Profile wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-other-profile.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-other-profile.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-other-profile.png)
+
+</details>
 
 ### Inbox Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-inbox.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-inbox.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-inbox.png) |
+<details>
+<summary>Click to View Inbox wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-inbox.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-inbox.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-inbox.png)
+
+</details>
 
 ### Create Thread Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-create-thread.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-create-thread.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-create-thread.png) |
+<details>
+<summary>Click to View Create Thread wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-create-thread.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-create-thread.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-create-thread.png)
+
+</details>
 
 ### Message Thread Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-message-thread.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-message-thread.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-message-thread.png) |
+<details>
+<summary>Click to View Message Thread wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-message-thread.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-message-thread.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-message-thread.png)
+
+</details>
 
 ### Search Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-search.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-search.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-search.png) |
+<details>
+<summary>Click to View Search Page wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-search.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-search.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-search.png)
+
+</details>
 
 ### Notifications Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-notifications.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-notifications.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-notifications.png) |
+<details>
+<summary>Click to View Notifications wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-notifications.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-notifications.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-notifications.png)
+
+</details>
 
 ### Admin Panel Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-admin-panel.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-admin-panel.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-admin-panel.png) |
+<details>
+<summary>Click to View Admin Panel wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-admin-panel.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-admin-panel.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-admin-panel.png)
+
+</details>
 
 ### Sign Out Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-sign-out.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-sign-out.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-sign-out.png) |
+<details>
+<summary>Click to View Sign Out Page wireframes</summary>
+
+#### Mobile
+![screenshot](documentation/wireframes/mobile-sign-out.png)
+
+#### Tablet
+![screenshot](documentation/wireframes/tablet-sign-out.png)
+
+#### Desktop
+![screenshot](documentation/wireframes/desktop-sign-out.png)
+
+</details>
 
 ## Features
 
