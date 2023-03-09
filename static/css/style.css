@@ -324,4 +324,15 @@ footer a:hover {
     .received-message {
         max-width: 85%;
     }
+
+    .post-time {
+        font-size: small;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+
+    .post-time {
+        font-size: x-small;
+    }
   }
