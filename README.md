@@ -728,6 +728,7 @@ You can fork this repository by using the following steps:
 | [Stack Overflow](https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login) | automated tests | how to create a user in tests that require user to be logged in |
 | [Django Docs](https://docs.djangoproject.com/en/4.1/topics/auth/default/) | post feed views, post/comment delete views, admin panel | only letting logged in users access main site and admins access certain pages |
 | [Stack Overflow](https://stackoverflow.com/questions/5235142/how-do-i-disable-the-resizable-property-of-a-textarea) | new post forms | how to disable the resizable property of a textarea |
+| [GitHub Gist](https://gist.github.com/niksumeiko/360164708c3b326bd1c8) | message form | how to disable autocomplete in a form field |
 
 ### Media
 
