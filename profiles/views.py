@@ -12,6 +12,9 @@ from notifications.models import Notification
 
 
 class ProfileView(View):
+    """
+    Display a user's profile
+    """
     def get(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         user = profile.user
@@ -66,6 +69,9 @@ class ProfileView(View):
 
 
 class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    Edit profile if it's your own
+    """
     model = Profile
     fields = ['display_name', 'bio', 'profile_pic', 'bg_pic']
     template_name = 'profile_edit.html'
@@ -80,6 +86,9 @@ class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 class AddFollower(LoginRequiredMixin, View):
+    """
+    Follow another user
+    """
     def post(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         profile.followers.add(request.user)
@@ -95,6 +104,9 @@ class AddFollower(LoginRequiredMixin, View):
 
 
 class RemoveFollower(LoginRequiredMixin, View):
+    """
+    Unfollow a user
+    """
     def post(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         profile.followers.remove(request.user)
@@ -106,6 +118,9 @@ class RemoveFollower(LoginRequiredMixin, View):
 
 
 class FollowersList(View):
+    """
+    See a list of followers for a user
+    """
     def get(self, request, pk, *args, **kwargs):
         profile = Profile.objects.get(pk=pk)
         followers = profile.followers.all()
