@@ -724,6 +724,7 @@ You can fork this repository by using the following steps:
 | [YouTube](https://www.youtube.com/watch?v=sF7go6tcKbc&t=1s&ab_channel=LegionScript) | messages | part 2 of tutorial for setting up messaging between users on the site |
 | [bbbootstrap](https://bbbootstrap.com/snippets/user-profile-sidebar-12290681) | profile card | inspiration for the profile card design |
 | [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/39dfbd4ba6ac42168b5df88d69c32f02/) | password reset email | Boutique ado project section on emails |
+| [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/c6a89f138afe4b209ee4fa6d6f1251a3/?child=first) | pagination & inbox layout | Django blog section on displaying content in rows |
 | [Stack Overflow](https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login) | automated tests | how to create a user in tests that require user to be logged in |
 | [Django Docs](https://docs.djangoproject.com/en/4.1/topics/auth/default/) | post feed views, post/comment delete views, admin panel | only letting logged in users access main site and admins access certain pages |
 
