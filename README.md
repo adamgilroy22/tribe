@@ -461,6 +461,7 @@ This is definitely a project I want to revisit in the future and add some extra 
 - [Gmail](https://www.google.com/gmail/about/) used to create an email address to send password reset emails from.
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) used to check contrast between colours on the site
 - [Balsamiq](https://balsamiq.com/wireframes) used to design my site wireframes.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) used to check for typos in my README and TESTING files.
 
 ## Database Design
 
