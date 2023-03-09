@@ -61,6 +61,10 @@ a:hover {
     color: var(--off-white);
 }
 
+textarea {
+    resize: none;
+}
+
 /* Landing page */
 .sign-up-button {
     background-color: var(--main-purple);
