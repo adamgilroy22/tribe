@@ -65,7 +65,7 @@
 
 	<div class="row justify-content-center my-3">
 		<div class="card col-md-8 p-3 shadow-sm">
-			<form method="POST" action="{% url 'create-message' thread.pk %}" enctype="multipart/form-data">
+			<form method="POST" action="{% url 'create-message' thread.pk %}" enctype="multipart/form-data" autocomplete="off">
 				{% csrf_token %}
 				{{ form | crispy }}
 
