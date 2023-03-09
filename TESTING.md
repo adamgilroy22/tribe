@@ -247,7 +247,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | **Inbox** | | | | |
 | | Click on Messages button in nav | User will be redirected to their inbox | Pass | |
 | | Click on New Conversation button | User will be redirected to the create message thread page | Pass | |
-| | Click on any previos message threads | User will be redirected to relevant thread | Pass | |
+| | Click on any previous message threads | User will be redirected to relevant thread | Pass | |
 | **Create Thread** | | | | |
 | | Type valid username into form and click continue | User will be redirected message thread with username they typed | Pass | If a thread already exists, they will be brought to that and if not a new thread will be created between the two users |
 | | Type an invalid username into form and click continue | Message will appear letting user know that username doesn't exist | Pass | |
@@ -295,7 +295,7 @@ The following are user stories I've implemented with screenshots to prove
 | As a registered user, I would like to like other people's posts, so that I can let them know I enjoyed their post. | ![screenshot](documentation/testing/liked-post.png) |
 | As a registered user, I would like to comment on other people's posts, so that I can further engage with the user and open a discussion. | ![screenshot](documentation/testing/post-detail-page.png) |
 | As a registered user, I would like to delete my comments on other people's posts, so that I can remove comments I no longer want published. | ![screenshot](documentation/testing/comment-delete.png) |
-| As a registered user, I would like to click on a post to expand it and see the psot comments, so that I can further engage with posts. | ![screenshot](documentation/testing/post-detail-page.png) |
+| As a registered user, I would like to click on a post to expand it and see the post comments, so that I can further engage with posts. | ![screenshot](documentation/testing/post-detail-page.png) |
 | As a registered user, I would like to see what time and date a post was created, so that I can take in the post content in full context based on how new or old it is. | ![screenshot](documentation/testing/individual-post.png) |
 | As a registered user, I would like to search for users and posts, so that I can find content I want to see and people I want to follow. | ![screenshot](documentation/testing/search-page.png) |
 | As a registered user, I would like to easily navigate the site, so that I can access what I need at the click of a button. | ![screenshot](documentation/testing/nav-menu-regular.png) |
@@ -330,7 +330,7 @@ I fully acknowledge and understand that, in a real-world scenario, an extensive 
 
 I have used Django's built-in unit testing framework to test the application functionality.
 
-In order to run the tests, I ran the following command in the terminal each time:
+In order to run the tests, I ran the following command in the terminal:
 
 `python3 manage.py test`
 
@@ -367,7 +367,7 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/adamgi
 
 **Open Issues**
 
-Any remaining open issues can be tracked [here](https://github.com/adamgilroy22/tribe/issues). All bugs were closed so any remaining issues are user stories that I have labeled as Won't Have in my MoSCoW priotitization.
+Any remaining open issues can be tracked [here](https://github.com/adamgilroy22/tribe/issues). All bugs were closed so any remaining issues are user stories that I have labeled as Won't Have in my MoSCoW prioritization.
 
 | Issue | Status |
 | --- | --- |
