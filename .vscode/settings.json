@@ -26,5 +26,6 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "[python]": {
       "editor.defaultFormatter": "ms-python.python"
-   }
+   },
+   "cSpell.language": "en-GB,en"
 }
