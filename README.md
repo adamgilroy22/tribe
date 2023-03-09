@@ -332,7 +332,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - **Profile**
 
-    - The profile contains a card with the user's information including profile picture, background iamge, display name, username, bio, number of posts and number of followers. If the user is viewing their own profile then they'll have an icon to edit their profile. If they're viewing another user's profile then they'll have a button to follow or unfollow that user. The profile also includes a list of posts and a form to create a new post if the user is on their own profile.
+    - The profile contains a card with the user's information including profile picture, background image, display name, username, bio, number of posts and number of followers. If the user is viewing their own profile then they'll have an icon to edit their profile. If they're viewing another user's profile then they'll have a button to follow or unfollow that user. The profile also includes a list of posts and a form to create a new post if the user is on their own profile.
 
     ![screenshot](documentation/testing/user-profile.png)
 
@@ -437,7 +437,7 @@ This is definitely a project I want to revisit in the future and add some extra 
 - Dark Mode
     - I'd like to implement a feature that allows the user to change the site's colour scheme to one with a dark background with lighter text to allow the site to be viewed easily in darker settings.
 - User Suspension
-    - I'd like to further increase the admin's ability to moderate the website by allowing them to suspend users if they post innapropriate content. This will disable the user from posting or interacting with other users for a set amount of time or permanently for severe incidents.
+    - I'd like to further increase the admin's ability to moderate the website by allowing them to suspend users if they post inappropriate content. This will disable the user from posting or interacting with other users for a set amount of time or permanently for severe incidents.
 
 ## Tools & Technologies Used
 
@@ -553,7 +553,7 @@ Through it, user stories were used to map out the development progress of the pr
 ### GitHub Issues
 
 [GitHub Issues](https://github.com/adamgilroy22/tribe/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories and creted a *Bug* tag to track and monitor issues on the site to be worked on.
+There, I used my own **User Story Template** to manage user stories and created a *Bug* tag to track and monitor issues on the site to be worked on.
 
 - [Open Issues](https://github.com/adamgilroy22/tribe/issues)
 
