@@ -57,7 +57,7 @@ class FollowingPostListView(LoginRequiredMixin, View):
         else:
             messages.add_message(
                 request, messages.ERROR,
-                'Oops something has went wrong, please try again!')
+                'Oops something has gone wrong, please try again!')
 
         return render(request.META['HTTP_REFERER'], context)
 
@@ -102,7 +102,7 @@ class AllPostListView(LoginRequiredMixin, View):
         else:
             messages.add_message(
                 request, messages.ERROR,
-                'Oops something has went wrong, please try again!')
+                'Oops something has gone wrong, please try again!')
 
         return render(request.META['HTTP_REFERER'], context)
 
@@ -149,7 +149,7 @@ class PostDetailView(LoginRequiredMixin, View):
             else:
                 messages.add_message(
                     request, messages.ERROR,
-                    'Oops something has went wrong, please try again!')
+                    'Oops something has gone wrong, please try again!')
 
         comments = Comment.objects.filter(post=post).order_by('-posted_on')
 
@@ -291,7 +291,7 @@ class ReportPost(LoginRequiredMixin, View):
 class FlaggedPostListView(LoginRequiredMixin, UserPassesTestMixin, View):
     """
     Display all flagged/reported posts on feed
-    only accessable by an admin
+    only accessible by an admin
     """
 
     def get(self, request, *args, **kwargs):
