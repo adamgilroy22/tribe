@@ -62,7 +62,7 @@
                 {% endif %}
             </a>
             <p>
-                <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> on {{ post.posted_on }}
+                <a class="text-primary profile-link" href="{% url 'profile' post.author.profile.pk %}">@{{ post.author }}</a> <span class="post-time">on {{ post.posted_on }}</span>
                 {% if request.user == post.author or request.user.is_superuser %}
                 <a href="{% url 'post-delete' post.pk %}" class="delete-icon"><i class="fa-solid fa-trash"></i></a>
                 {% endif %}
