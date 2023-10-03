@@ -9,6 +9,8 @@ Developed by Adam Gilroy
 
 [Live link to website](https://tribe.herokuapp.com/)
 
+Final Grade: Distinction
+
 ## UX
 
 I wanted to keep the design quite simple on this site so as to not distract the user. I used the main purple colour throughout the site to establish a brand with Tribe. The off-white colour I used for my background looks well with the purple on my nav menu.
